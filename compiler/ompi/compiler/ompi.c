@@ -261,7 +261,7 @@ aststmt dfc_traverse_dfc_all_df_function_tree_for_globals_and_output_ad_and_prin
 	{
 		dfc_statistics = BlockList(dfc_statistics, verbit("FILE *fp_sche = NULL;\n"));
 		dfc_statistics = BlockList(dfc_statistics, verbit("pthread_mutex_t sched_info_mutex;\n"));
-		dfc_statistics = BlockList(dfc_statistics, verbit("pid_t gettid() { return syscall(SYS_gettid); }\n"));
+		// dfc_statistics = BlockList(dfc_statistics, verbit("pid_t gettid() { return syscall(SYS_gettid); }\n"));
 		dfc_statistics = BlockList(dfc_statistics, verbit("struct timeval program_start;\n"));		
 	}
 
@@ -303,7 +303,13 @@ aststmt dfc_traverse_dfc_all_df_function_tree_for_globals_and_output_ad_and_prin
 //wcy
 void dfc_insert_include_to_head(void)
 {
-  	aststmt dfc_include_tree=BlockList(verbit("#include<stdlib.h>"),verbit("#include<stdio.h>"));
+  	aststmt dfc_include_tree=BlockList(verbit("#define _GNU_SOURCE\n"),verbit("#include<stdlib.h>"));
+	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<stdio.h>"));
+	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<unistd.h>"));
+	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<stdlib.h>"));
+	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<sys/syscall.h>"));
+	// dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
+	// dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
 	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
 	aststmt t=ast;
   	while (t->u.next->type == STATEMENTLIST)

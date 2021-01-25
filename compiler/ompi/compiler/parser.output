@@ -1,7 +1,7 @@
 Terminals unused in grammar
 
-   __ATTRIBUTE__
-   OMPIX_UPONRETURN
+    __ATTRIBUTE__
+    OMPIX_UPONRETURN
 
 
 State 63 conflicts: 1 shift/reduce
@@ -1147,893 +1147,1168 @@ Grammar
 
 Terminals, with rules where they appear
 
-$end (0) 0
-'\n' (10) 338 357 381 394 396 407 432 442 449 456 475 484 496 497 499
-    514 526 534 541 548 555 563 572 579 586 593 600 607 614 633 646
-    658 660 661 663 664 666 667 669 677 678 682 683 684 685 690 693
-    696 749 751 770 784
-'!' (33) 42
-'%' (37) 48
-'&' (38) 37 64 701
-'(' (40) 11 14 15 16 17 24 25 33 34 35 36 44 167 177 178 179 180 181
-    182 183 204 211 212 213 214 253 254 255 256 257 259 260 261 262
-    263 264 265 266 267 268 269 270 350 352 355 368 370 372 405 416
-    422 424 426 436 464 466 468 492 494 510 512 522 524 625 628 662
-    680 693 696 711 712 713 714 715 717 719 721 723 725 727 728 742
-    743 744 755 756 757 774 775 776 777 788 789 790 794 795
-')' (41) 11 14 15 16 17 24 25 33 34 35 36 44 167 177 178 179 180 181
-    182 183 204 211 212 213 214 253 254 255 256 257 259 260 261 262
-    263 264 265 266 267 268 269 270 350 352 355 368 370 372 405 416
-    422 424 426 436 464 466 468 492 494 510 512 522 524 625 628 662
-    680 693 696 711 712 713 714 715 717 719 721 723 725 727 728 742
-    743 744 755 756 757 774 775 776 777 788 789 790 794 795
-'*' (42) 38 46 175 176 184 185 186 187 209 210 699 788
-'+' (43) 39 50 698
-',' (44) 25 27 34 35 36 89 106 147 153 154 157 191 193 198 218 221
-    222 341 360 370 372 384 399 410 435 445 452 459 478 487 502 517
-    524 529 537 544 551 558 566 575 582 589 596 603 610 617 636 649
-    685 709 731 734 735 746 754 762 763 773 779 787
-'-' (45) 40 51 700
-'.' (46) 18 20 227 228
-'/' (47) 47
-':' (58) 74 149 150 239 240 241 428 466 628 696 725 740 777
-';' (59) 91 92 140 141 180 181 182 183 251 252 257 259 260 261 262
-    263 264 265 266 267 268 269 270 271 272 273 274 275 783
-'<' (60) 56
-'=' (61) 77 109 159 223 711
-'>' (62) 57
-'?' (63) 74 781
-'[' (91) 13 168 169 170 171 172 173 174 175 176 205 206 207 208 209
-    210 226 737 739 781 782
-']' (93) 13 168 169 170 171 172 173 174 175 176 205 206 207 208 209
-    210 226 737 739 781 782
-'^' (94) 66 702
-'{' (123) 24 25 130 131 132 133 151 152 153 154 217 218 242 244 390
-'|' (124) 68 703
-'}' (125) 24 25 130 131 132 133 151 152 153 154 217 218 242 244 390
-'~' (126) 41
-error (256) 379
-START_SYMBOL_EXPRESSION (258) 2
-START_SYMBOL_BLOCKLIST (259) 3
-START_SYMBOL_TRANSUNIT (260) 4
-IDENTIFIER (261) 5 8 14 15 18 19 35 132 134 152 154 155 166 197 198
-    227 239 271 662 697 711 712 729 730 731 732 734 745 746 780 781
-    782 794 795
-TYPE_NAME (262) 215
-CONSTANT (263) 9
-STRING_LITERAL (264) 6 7
-PTR_OP (265) 19 21
-INC_OP (266) 22 29
-DEC_OP (267) 23 30
-LEFT_OP (268) 53
-RIGHT_OP (269) 54
-LE_OP (270) 58
-GE_OP (271) 59
-EQ_OP (272) 61
-NE_OP (273) 62
-AND_OP (274) 70 704
-OR_OP (275) 72 705
-MUL_ASSIGN (276) 78
-DIV_ASSIGN (277) 79
-MOD_ASSIGN (278) 80
-ADD_ASSIGN (279) 81
-SUB_ASSIGN (280) 82
-LEFT_ASSIGN (281) 83
-RIGHT_ASSIGN (282) 84
-AND_ASSIGN (283) 85
-XOR_ASSIGN (284) 86
-OR_ASSIGN (285) 87
-SIZEOF (286) 32 33
-TYPEDEF (287) 110
-EXTERN (288) 111
-STATIC (289) 112 172 173 174
-AUTO (290) 113
-REGISTER (291) 114
-RESTRICT (292) 161
-CHAR (293) 116
-SHORT (294) 117
-INT (295) 118
-LONG (296) 119
-SIGNED (297) 122
-UNSIGNED (298) 123
-FLOAT (299) 120
-DOUBLE (300) 121
-CONST (301) 160
-VOLATILE (302) 162
-VOID (303) 115
-INLINE (304) 163
-UBOOL (305) 124
-UCOMPLEX (306) 125
-UIMAGINARY (307) 126
-STRUCT (308) 136
-UNION (309) 137
-ENUM (310) 151 152 153 154 155
-ELLIPSIS (311) 191
-CASE (312) 240
-DEFAULT (313) 241
-IF (314) 253 254
-ELSE (315) 254
-SWITCH (316) 255
-WHILE (317) 256 257
-DO (318) 257
-FOR (319) 259 260 261 262 263 264 265 266 267 268 269 270
-GOTO (320) 271
-CONTINUE (321) 272
-BREAK (322) 273
-RETURN (323) 274 275
-__BUILTIN_VA_ARG (324) 34
-__BUILTIN_OFFSETOF (325) 35
-__BUILTIN_TYPES_COMPATIBLE_P (326) 36
-__ATTRIBUTE__ (327)
-PRAGMA_OMP (328) 338 357 381 394 396 407 432 442 449 456 475 484 496
-    497 499 514 526 534 541 548 555 563 572 579 586 593 600 607 614
-    633 646 658 660 661 663 664 666 667 669 677 678 682 683 684 685
-    696
-PRAGMA_OMP_THREADPRIVATE (329) 693
-OMP_PARALLEL (330) 338 449 534 541 586 593 600 607 633 646 686
-OMP_SECTIONS (331) 381 646 687
-OMP_NOWAIT (332) 366 389 403
-OMP_ORDERED (333) 367 682
-OMP_SCHEDULE (334) 368 370 372
-OMP_STATIC (335) 374 522 524
-OMP_DYNAMIC (336) 375
-OMP_GUIDED (337) 376
-OMP_RUNTIME (338) 377
-OMP_AUTO (339) 355 378 715
-OMP_SECTION (340) 394
-OMP_AFFINITY (341) 372
-OMP_SINGLE (342) 396
-OMP_MASTER (343) 658 742
-OMP_CRITICAL (344) 660 661
-OMP_BARRIER (345) 663
-OMP_ATOMIC (346) 669
-OMP_FLUSH (347) 677 678
-OMP_PRIVATE (348) 717
-OMP_FIRSTPRIVATE (349) 719
-OMP_LASTPRIVATE (350) 721
-OMP_SHARED (351) 713 723
-OMP_DEFAULT (352) 713 714 715
-OMP_NONE (353) 714
-OMP_REDUCTION (354) 696 725 777
-OMP_COPYIN (355) 352
-OMP_NUMTHREADS (356) 350
-OMP_COPYPRIVATE (357) 405
-OMP_FOR (358) 357 442 449 534 541 586 593 600 607 633 688
-OMP_IF (359) 727
-OMP_TASK (360) 614 784
-OMP_UNTIED (361) 626 759 792
-OMP_TASKWAIT (362) 664
-OMP_COLLAPSE (363) 728
-OMP_FINAL (364) 625
-OMP_MERGEABLE (365) 627
-OMP_TASKYIELD (366) 667
-OMP_READ (367) 671
-OMP_WRITE (368) 672
-OMP_CAPTURE (369) 674
-OMP_UPDATE (370) 484 673
-OMP_MIN (371) 706
-OMP_MAX (372) 707
-OMP_PROCBIND (373) 742 743 744
-OMP_CLOSE (374) 743
-OMP_SPREAD (375) 744
-OMP_SIMD (376) 407 432 442 449 526 541 563 579 600 607
-OMP_INBRANCH (377) 419
-OMP_NOTINBRANCH (378) 420
-OMP_UNIFORM (379) 422
-OMP_LINEAR (380) 424
-OMP_ALIGNED (381) 426
-OMP_SIMDLEN (382) 436
-OMP_SAFELEN (383) 416
-OMP_DECLARE (384) 432 496 497 696
-OMP_TARGET (385) 456 475 484 496 497 548 572 579 593 607
-OMP_DATA (386) 456
-OMP_DEVICE (387) 464
-OMP_MAP (388) 466 468
-OMP_ALLOC (389) 469
-OMP_TO (390) 470 492
-OMP_FROM (391) 471 494
-OMP_TOFROM (392) 472
-OMP_END (393) 497
-OMP_TEAMS (394) 499 548 555 563 572 579 586 593 600 607
-OMP_DISTRIBUTE (395) 514 526 534 541 555 563 572 579 586 593 600 607
-OMP_NUMTEAMS (396) 510
-OMP_THREADLIMIT (397) 512
-OMP_DISTSCHEDULE (398) 522 524
-OMP_DEPEND (399) 628
-OMP_IN (400) 629
-OMP_OUT (401) 630
-OMP_INOUT (402) 631
-OMP_TASKGROUP (403) 666 689
-OMP_SEQ_CST (404) 676
-OMP_CANCEL (405) 683 684 685
-OMP_INITIALIZER (406) 711 712
-PRAGMA_OMP_CANCELLATIONPOINT (407) 690
-PRAGMA_OMPIX (408) 749 751 770 784
-OMPIX_TASKDEF (409) 770
-OMPIX_IN (410) 774
-OMPIX_OUT (411) 775
-OMPIX_INOUT (412) 776
-OMPIX_TASKSYNC (413) 749
-OMPIX_UPONRETURN (414)
-OMPIX_ATNODE (415) 788 789
-OMPIX_DETACHED (416) 793
-OMPIX_ATWORKER (417) 790
-OMPIX_TASKSCHEDULE (418) 751
-OMPIX_STRIDE (419) 755
-OMPIX_START (420) 756
-OMPIX_SCOPE (421) 757
-OMPIX_NODES (422) 760
-OMPIX_WORKERS (423) 761 762 763
-OMPIX_LOCAL (424) 763
-OMPIX_GLOBAL (425) 762
-OMPIX_TIED (426) 758 791
+    $end (0) 0
+    '\n' (10) 338 357 381 394 396 407 432 442 449 456 475 484 496 497 499 514 526 534 541 548 555 563 572 579 586 593 600 607 614 633 646 658 660 661 663 664 666 667 669 677 678 682 683 684 685 690 693 696 749 751 770 784
+    '!' (33) 42
+    '%' (37) 48
+    '&' (38) 37 64 701
+    '(' (40) 11 14 15 16 17 24 25 33 34 35 36 44 167 177 178 179 180 181 182 183 204 211 212 213 214 253 254 255 256 257 259 260 261 262 263 264 265 266 267 268 269 270 350 352 355 368 370 372 405 416 422 424 426 436 464 466 468 492 494 510 512 522 524 625 628 662 680 693 696 711 712 713 714 715 717 719 721 723 725 727 728 742 743 744 755 756 757 774 775 776 777 788 789 790 794 795
+    ')' (41) 11 14 15 16 17 24 25 33 34 35 36 44 167 177 178 179 180 181 182 183 204 211 212 213 214 253 254 255 256 257 259 260 261 262 263 264 265 266 267 268 269 270 350 352 355 368 370 372 405 416 422 424 426 436 464 466 468 492 494 510 512 522 524 625 628 662 680 693 696 711 712 713 714 715 717 719 721 723 725 727 728 742 743 744 755 756 757 774 775 776 777 788 789 790 794 795
+    '*' (42) 38 46 175 176 184 185 186 187 209 210 699 788
+    '+' (43) 39 50 698
+    ',' (44) 25 27 34 35 36 89 106 147 153 154 157 191 193 198 218 221 222 341 360 370 372 384 399 410 435 445 452 459 478 487 502 517 524 529 537 544 551 558 566 575 582 589 596 603 610 617 636 649 685 709 731 734 735 746 754 762 763 773 779 787
+    '-' (45) 40 51 700
+    '.' (46) 18 20 227 228
+    '/' (47) 47
+    ':' (58) 74 149 150 239 240 241 428 466 628 696 725 740 777
+    ';' (59) 91 92 140 141 180 181 182 183 251 252 257 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 783
+    '<' (60) 56
+    '=' (61) 77 109 159 223 711
+    '>' (62) 57
+    '?' (63) 74 781
+    '[' (91) 13 168 169 170 171 172 173 174 175 176 205 206 207 208 209 210 226 737 739 781 782
+    ']' (93) 13 168 169 170 171 172 173 174 175 176 205 206 207 208 209 210 226 737 739 781 782
+    '^' (94) 66 702
+    '{' (123) 24 25 130 131 132 133 151 152 153 154 217 218 242 244 390
+    '|' (124) 68 703
+    '}' (125) 24 25 130 131 132 133 151 152 153 154 217 218 242 244 390
+    '~' (126) 41
+    error (256) 379
+    START_SYMBOL_EXPRESSION (258) 2
+    START_SYMBOL_BLOCKLIST (259) 3
+    START_SYMBOL_TRANSUNIT (260) 4
+    IDENTIFIER <name> (261) 5 8 14 15 18 19 35 132 134 152 154 155 166 197 198 227 239 271 662 697 711 712 729 730 731 732 734 745 746 780 781 782 794 795
+    TYPE_NAME <name> (262) 215
+    CONSTANT <name> (263) 9
+    STRING_LITERAL <name> (264) 6 7
+    PTR_OP <name> (265) 19 21
+    INC_OP <name> (266) 22 29
+    DEC_OP <name> (267) 23 30
+    LEFT_OP <name> (268) 53
+    RIGHT_OP <name> (269) 54
+    LE_OP <name> (270) 58
+    GE_OP <name> (271) 59
+    EQ_OP <name> (272) 61
+    NE_OP <name> (273) 62
+    AND_OP <name> (274) 70 704
+    OR_OP <name> (275) 72 705
+    MUL_ASSIGN <name> (276) 78
+    DIV_ASSIGN <name> (277) 79
+    MOD_ASSIGN <name> (278) 80
+    ADD_ASSIGN <name> (279) 81
+    SUB_ASSIGN <name> (280) 82
+    LEFT_ASSIGN <name> (281) 83
+    RIGHT_ASSIGN <name> (282) 84
+    AND_ASSIGN <name> (283) 85
+    XOR_ASSIGN <name> (284) 86
+    OR_ASSIGN <name> (285) 87
+    SIZEOF <name> (286) 32 33
+    TYPEDEF <name> (287) 110
+    EXTERN <name> (288) 111
+    STATIC <name> (289) 112 172 173 174
+    AUTO <name> (290) 113
+    REGISTER <name> (291) 114
+    RESTRICT <name> (292) 161
+    CHAR <name> (293) 116
+    SHORT <name> (294) 117
+    INT <name> (295) 118
+    LONG <name> (296) 119
+    SIGNED <name> (297) 122
+    UNSIGNED <name> (298) 123
+    FLOAT <name> (299) 120
+    DOUBLE <name> (300) 121
+    CONST <name> (301) 160
+    VOLATILE <name> (302) 162
+    VOID <name> (303) 115
+    INLINE <name> (304) 163
+    UBOOL <name> (305) 124
+    UCOMPLEX <name> (306) 125
+    UIMAGINARY <name> (307) 126
+    STRUCT <name> (308) 136
+    UNION <name> (309) 137
+    ENUM <name> (310) 151 152 153 154 155
+    ELLIPSIS <name> (311) 191
+    CASE <name> (312) 240
+    DEFAULT <name> (313) 241
+    IF <name> (314) 253 254
+    ELSE <name> (315) 254
+    SWITCH <name> (316) 255
+    WHILE <name> (317) 256 257
+    DO <name> (318) 257
+    FOR <name> (319) 259 260 261 262 263 264 265 266 267 268 269 270
+    GOTO <name> (320) 271
+    CONTINUE <name> (321) 272
+    BREAK <name> (322) 273
+    RETURN <name> (323) 274 275
+    __BUILTIN_VA_ARG <name> (324) 34
+    __BUILTIN_OFFSETOF <name> (325) 35
+    __BUILTIN_TYPES_COMPATIBLE_P <name> (326) 36
+    __ATTRIBUTE__ <name> (327)
+    PRAGMA_OMP <name> (328) 338 357 381 394 396 407 432 442 449 456 475 484 496 497 499 514 526 534 541 548 555 563 572 579 586 593 600 607 614 633 646 658 660 661 663 664 666 667 669 677 678 682 683 684 685 696
+    PRAGMA_OMP_THREADPRIVATE <name> (329) 693
+    OMP_PARALLEL <name> (330) 338 449 534 541 586 593 600 607 633 646 686
+    OMP_SECTIONS <name> (331) 381 646 687
+    OMP_NOWAIT <name> (332) 366 389 403
+    OMP_ORDERED <name> (333) 367 682
+    OMP_SCHEDULE <name> (334) 368 370 372
+    OMP_STATIC <name> (335) 374 522 524
+    OMP_DYNAMIC <name> (336) 375
+    OMP_GUIDED <name> (337) 376
+    OMP_RUNTIME <name> (338) 377
+    OMP_AUTO <name> (339) 355 378 715
+    OMP_SECTION <name> (340) 394
+    OMP_AFFINITY <name> (341) 372
+    OMP_SINGLE <name> (342) 396
+    OMP_MASTER <name> (343) 658 742
+    OMP_CRITICAL <name> (344) 660 661
+    OMP_BARRIER <name> (345) 663
+    OMP_ATOMIC <name> (346) 669
+    OMP_FLUSH <name> (347) 677 678
+    OMP_PRIVATE <name> (348) 717
+    OMP_FIRSTPRIVATE <name> (349) 719
+    OMP_LASTPRIVATE <name> (350) 721
+    OMP_SHARED <name> (351) 713 723
+    OMP_DEFAULT <name> (352) 713 714 715
+    OMP_NONE <name> (353) 714
+    OMP_REDUCTION <name> (354) 696 725 777
+    OMP_COPYIN <name> (355) 352
+    OMP_NUMTHREADS <name> (356) 350
+    OMP_COPYPRIVATE <name> (357) 405
+    OMP_FOR <name> (358) 357 442 449 534 541 586 593 600 607 633 688
+    OMP_IF <name> (359) 727
+    OMP_TASK <name> (360) 614 784
+    OMP_UNTIED <name> (361) 626 759 792
+    OMP_TASKWAIT <name> (362) 664
+    OMP_COLLAPSE <name> (363) 728
+    OMP_FINAL <name> (364) 625
+    OMP_MERGEABLE <name> (365) 627
+    OMP_TASKYIELD <name> (366) 667
+    OMP_READ <name> (367) 671
+    OMP_WRITE <name> (368) 672
+    OMP_CAPTURE <name> (369) 674
+    OMP_UPDATE <name> (370) 484 673
+    OMP_MIN <name> (371) 706
+    OMP_MAX <name> (372) 707
+    OMP_PROCBIND <name> (373) 742 743 744
+    OMP_CLOSE <name> (374) 743
+    OMP_SPREAD <name> (375) 744
+    OMP_SIMD <name> (376) 407 432 442 449 526 541 563 579 600 607
+    OMP_INBRANCH <name> (377) 419
+    OMP_NOTINBRANCH <name> (378) 420
+    OMP_UNIFORM <name> (379) 422
+    OMP_LINEAR <name> (380) 424
+    OMP_ALIGNED <name> (381) 426
+    OMP_SIMDLEN <name> (382) 436
+    OMP_SAFELEN <name> (383) 416
+    OMP_DECLARE <name> (384) 432 496 497 696
+    OMP_TARGET <name> (385) 456 475 484 496 497 548 572 579 593 607
+    OMP_DATA <name> (386) 456
+    OMP_DEVICE <name> (387) 464
+    OMP_MAP <name> (388) 466 468
+    OMP_ALLOC <name> (389) 469
+    OMP_TO <name> (390) 470 492
+    OMP_FROM <name> (391) 471 494
+    OMP_TOFROM <name> (392) 472
+    OMP_END <name> (393) 497
+    OMP_TEAMS <name> (394) 499 548 555 563 572 579 586 593 600 607
+    OMP_DISTRIBUTE <name> (395) 514 526 534 541 555 563 572 579 586 593 600 607
+    OMP_NUMTEAMS <name> (396) 510
+    OMP_THREADLIMIT <name> (397) 512
+    OMP_DISTSCHEDULE <name> (398) 522 524
+    OMP_DEPEND <name> (399) 628
+    OMP_IN <name> (400) 629
+    OMP_OUT <name> (401) 630
+    OMP_INOUT <name> (402) 631
+    OMP_TASKGROUP <name> (403) 666 689
+    OMP_SEQ_CST <name> (404) 676
+    OMP_CANCEL <name> (405) 683 684 685
+    OMP_INITIALIZER <name> (406) 711 712
+    PRAGMA_OMP_CANCELLATIONPOINT <name> (407) 690
+    PRAGMA_OMPIX <name> (408) 749 751 770 784
+    OMPIX_TASKDEF <name> (409) 770
+    OMPIX_IN <name> (410) 774
+    OMPIX_OUT <name> (411) 775
+    OMPIX_INOUT <name> (412) 776
+    OMPIX_TASKSYNC <name> (413) 749
+    OMPIX_UPONRETURN <name> (414)
+    OMPIX_ATNODE <name> (415) 788 789
+    OMPIX_DETACHED <name> (416) 793
+    OMPIX_ATWORKER <name> (417) 790
+    OMPIX_TASKSCHEDULE <name> (418) 751
+    OMPIX_STRIDE <name> (419) 755
+    OMPIX_START <name> (420) 756
+    OMPIX_SCOPE <name> (421) 757
+    OMPIX_NODES <name> (422) 760
+    OMPIX_WORKERS <name> (423) 761 762 763
+    OMPIX_LOCAL <name> (424) 763
+    OMPIX_GLOBAL <name> (425) 762
+    OMPIX_TIED <name> (426) 758 791
 
 
 Nonterminals, with rules where they appear
 
-$accept (197)
-    on left: 0
-start_trick (198)
-    on left: 1 2 3 4, on right: 0
-enumeration_constant (199)
-    on left: 5, on right: 158 159
-string_literal (200)
-    on left: 6 7, on right: 7 10
-primary_expression (201)
-    on left: 8 9 10 11, on right: 12
-postfix_expression (202)
-    on left: 12 13 14 15 16 17 18 19 20 21 22 23 24 25, on right: 13
-    16 17 18 19 20 21 22 23 28
-argument_expression_list (203)
-    on left: 26 27, on right: 15 17 27 712 795
-unary_expression (204)
-    on left: 28 29 30 31 32 33 34 35 36, on right: 29 30 32 43 76
-unary_operator (205)
-    on left: 37 38 39 40 41 42, on right: 31
-cast_expression (206)
-    on left: 43 44, on right: 31 44 45 46 47 48
-multiplicative_expression (207)
-    on left: 45 46 47 48, on right: 46 47 48 49 50 51
-additive_expression (208)
-    on left: 49 50 51, on right: 50 51 52 53 54
-shift_expression (209)
-    on left: 52 53 54, on right: 53 54 55 56 57 58 59
-relational_expression (210)
-    on left: 55 56 57 58 59, on right: 56 57 58 59 60 61 62
-equality_expression (211)
-    on left: 60 61 62, on right: 61 62 63 64
-AND_expression (212)
-    on left: 63 64, on right: 64 65 66
-exclusive_OR_expression (213)
-    on left: 65 66, on right: 66 67 68
-inclusive_OR_expression (214)
-    on left: 67 68, on right: 68 69 70
-logical_AND_expression (215)
-    on left: 69 70, on right: 70 71 72
-logical_OR_expression (216)
-    on left: 71 72, on right: 72 73 74
-conditional_expression (217)
-    on left: 73 74, on right: 74 75 90 711
-assignment_expression (218)
-    on left: 75 76, on right: 26 27 34 76 88 89 170 171 172 173 174
-    207 208 216 755 756 782 789 790
-assignment_operator (219)
-    on left: 77 78 79 80 81 82 83 84 85 86 87, on right: 76
-expression (220)
-    on left: 88 89, on right: 2 11 13 74 89 252 253 254 255 256 257
-    260 261 262 263 264 265 266 268 269 270 275 350 370 372 416 428
-    436 464 510 512 524 625 696 727 728 740 741
-constant_expression (221)
-    on left: 90, on right: 149 150 159 226 240
-declaration (222)
-    on left: 91 92 93 94 95 96, on right: 247 267 268 269 270 279 291
-    292 294
-declaration_specifiers (223)
-    on left: 97 98 99 100 101 102 103 104, on right: 91 92 98 100 102
-    104 194 195 196 284 288
-init_declarator_list (224)
-    on left: 105 106, on right: 92 106
-init_declarator (225)
-    on left: 107 109, on right: 105 106
-$@1 (226)
-    on left: 108, on right: 109
-storage_class_specifier (227)
-    on left: 110 111 112 113 114, on right: 97 98
-type_specifier (228)
-    on left: 115 116 117 118 119 120 121 122 123 124 125 126 127 128
-    129, on right: 99 100 142 143 708 709
-struct_or_union_specifier (229)
-    on left: 130 131 132 133 134 135, on right: 127
-struct_or_union (230)
-    on left: 136 137, on right: 130 131 132 133 134 135
-struct_declaration_list (231)
-    on left: 138 139, on right: 130 132 133 139
-struct_declaration (232)
-    on left: 140 141, on right: 138 139
-specifier_qualifier_list (233)
-    on left: 142 143 144 145, on right: 140 141 143 145 199 200
-struct_declarator_list (234)
-    on left: 146 147, on right: 140 147
-struct_declarator (235)
-    on left: 148 149 150, on right: 146 147
-enum_specifier (236)
-    on left: 151 152 153 154 155, on right: 128
-enumerator_list (237)
-    on left: 156 157, on right: 151 152 153 154 157
-enumerator (238)
-    on left: 158 159, on right: 156 157
-type_qualifier (239)
-    on left: 160 161 162, on right: 101 102 144 145 188 189
-function_specifier (240)
-    on left: 163, on right: 103 104
-declarator (241)
-    on left: 164 165, on right: 107 109 148 149 167 194 284 286 288
-    290
-direct_declarator (242)
-    on left: 166 167 168 169 170 171 172 173 174 175 176 177 178 179
-    180 181 182 183, on right: 164 165 168 169 170 171 172 173 174
-    175 176 177 178 179 180 181 182 183
-pointer (243)
-    on left: 184 185 186 187, on right: 165 186 187 201 203
-type_qualifier_list (244)
-    on left: 188 189, on right: 169 171 173 174 176 185 187 189
-parameter_type_list (245)
-    on left: 190 191, on right: 177 213 214
-parameter_list (246)
-    on left: 192 193, on right: 180 181 182 190 191 193
-parameter_declaration (247)
-    on left: 194 195 196, on right: 192 193
-identifier_list (248)
-    on left: 197 198, on right: 179 198
-type_name (249)
-    on left: 199 200, on right: 24 25 33 34 35 36 44
-abstract_declarator (250)
-    on left: 201 202 203, on right: 196 200 204
-direct_abstract_declarator (251)
-    on left: 204 205 206 207 208 209 210 211 212 213 214, on right:
-    202 203 206 208 210 212 214
-typedef_name (252)
-    on left: 215, on right: 20 21 129 133 135 228
-initializer (253)
-    on left: 216 217 218, on right: 109 219 220 221 222
-initializer_list (254)
-    on left: 219 220 221 222, on right: 24 25 217 218 221 222
-designation (255)
-    on left: 223, on right: 220 222
-designator_list (256)
-    on left: 224 225, on right: 223 225
-designator (257)
-    on left: 226 227 228, on right: 224 225
-statement (258)
-    on left: 229 230 231 232 233 234 235 236, on right: 237 239 248
-    253 254 255 256 257 259 260 261 262 263 264 265 266 267 268 269
-    270 336
-statement_for_labeled (259)
-    on left: 237 238, on right: 240 241
-labeled_statement (260)
-    on left: 239 240 241, on right: 229
-compound_statement (261)
-    on left: 242 244, on right: 230 284 286 288 290 767
-@2 (262)
-    on left: 243, on right: 244
-block_item_list (263)
-    on left: 245 246, on right: 3 244 246
-block_item (264)
-    on left: 247 248 249 250, on right: 245 246
-expression_statement (265)
-    on left: 251 252, on right: 231 668
-selection_statement (266)
-    on left: 253 254 255, on right: 232
-iteration_statement (267)
-    on left: 256 257 258, on right: 233
-iteration_statement_for (268)
-    on left: 259 260 261 262 263 264 265 266 267 268 269 270, on right:
-    258 356 406 441 448 513 525 533 554 562 571 578 585 592 599 606
-    632
-jump_statement (269)
-    on left: 271 272 273 274 275, on right: 234
-translation_unit (270)
-    on left: 276 277, on right: 1 4 277
-external_declaration (271)
-    on left: 278 279 280, on right: 276 277
-function_definition (272)
-    on left: 281 282, on right: 278 293 295
-normal_function_definition (273)
-    on left: 284 286, on right: 281 767 768
-$@3 (274)
-    on left: 283, on right: 284
-$@4 (275)
-    on left: 285, on right: 286
-oldstyle_function_definition (276)
-    on left: 288 290, on right: 282
-$@5 (277)
-    on left: 287, on right: 288
-$@6 (278)
-    on left: 289, on right: 290
-declaration_list (279)
-    on left: 291 292, on right: 288 290 292
-declaration_definition (280)
-    on left: 293 294, on right: 296 297
-function_statement (281)
-    on left: 295, on right: 429
-declarations_definitions_seq (282)
-    on left: 296 297, on right: 297 495
-openmp_construct (283)
-    on left: 298 299 300 301 302 303 304 305 306 307 308 309 310 311
-    312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327
-    328 329, on right: 235
-openmp_directive (284)
-    on left: 330 331 332 333 334 335, on right: 238 249
-structured_block (285)
-    on left: 336, on right: 337 391 392 393 395 455 474 498 540 547
-    613 657 659 665 681
-parallel_construct (286)
-    on left: 337, on right: 298
-parallel_directive (287)
-    on left: 338, on right: 337
-parallel_clause_optseq (288)
-    on left: 339 340 341, on right: 338 340 341
-parallel_clause (289)
-    on left: 342 343 344 345 346 347, on right: 340 341
-unique_parallel_clause (290)
-    on left: 348 350 352 353 355, on right: 342 637 650
-$@7 (291)
-    on left: 349, on right: 350
-$@8 (292)
-    on left: 351, on right: 352
-$@9 (293)
-    on left: 354, on right: 355
-for_construct (294)
-    on left: 356, on right: 299
-for_directive (295)
-    on left: 357, on right: 356
-for_clause_optseq (296)
-    on left: 358 359 360, on right: 357 359 360
-for_clause (297)
-    on left: 361 362 363 364 365 366, on right: 359 360 446
-unique_for_clause (298)
-    on left: 367 368 370 372 373, on right: 361 638
-$@10 (299)
-    on left: 369, on right: 370
-$@11 (300)
-    on left: 371, on right: 372
-schedule_kind (301)
-    on left: 374 375 376 377 378 379, on right: 368 370
-sections_construct (302)
-    on left: 380, on right: 300
-sections_directive (303)
-    on left: 381, on right: 380
-sections_clause_optseq (304)
-    on left: 382 383 384, on right: 381 383 384
-sections_clause (305)
-    on left: 385 386 387 388 389, on right: 383 384
-section_scope (306)
-    on left: 390, on right: 380 645
-section_sequence (307)
-    on left: 391 392 393, on right: 390 393
-section_directive (308)
-    on left: 394, on right: 392 393
-single_construct (309)
-    on left: 395, on right: 301
-single_directive (310)
-    on left: 396, on right: 395
-single_clause_optseq (311)
-    on left: 397 398 399, on right: 396 398 399
-single_clause (312)
-    on left: 400 401 402 403, on right: 398 399
-unique_single_clause (313)
-    on left: 405, on right: 400
-$@12 (314)
-    on left: 404, on right: 405
-simd_construct (315)
-    on left: 406, on right: 309
-simd_directive (316)
-    on left: 407, on right: 406
-simd_clause_optseq (317)
-    on left: 408 409 410, on right: 407 409 410
-simd_clause (318)
-    on left: 411 412 413 414 415, on right: 409 410 532
-unique_simd_clause (319)
-    on left: 416 417 418, on right: 411 447 454
-inbranch_clause (320)
-    on left: 419 420, on right: 440
-uniform_clause (321)
-    on left: 422, on right: 439
-$@13 (322)
-    on left: 421, on right: 422
-linear_clause (323)
-    on left: 424, on right: 417 437
-$@14 (324)
-    on left: 423, on right: 424
-aligned_clause (325)
-    on left: 426, on right: 418 438
-$@15 (326)
-    on left: 425, on right: 426
-optional_expression (327)
-    on left: 427 428, on right: 424 426
-declare_simd_construct (328)
-    on left: 429, on right: 94
-declare_simd_directive_seq (329)
-    on left: 430 431, on right: 429 431
-declare_simd_directive (330)
-    on left: 432, on right: 430 431
-declare_simd_clause_optseq (331)
-    on left: 433 434 435, on right: 432 434 435
-declare_simd_clause (332)
-    on left: 436 437 438 439 440, on right: 434 435
-for_simd_construct (333)
-    on left: 441, on right: 310
-for_simd_directive (334)
-    on left: 442, on right: 441
-for_simd_clause_optseq (335)
-    on left: 443 444 445, on right: 442 444 445
-for_simd_clause (336)
-    on left: 446 447, on right: 444 445
-parallel_for_simd_construct (337)
-    on left: 448, on right: 311
-parallel_for_simd_directive (338)
-    on left: 449, on right: 448
-parallel_for_simd_clause_optseq (339)
-    on left: 450 451 452, on right: 449 451 452
-parallel_for_simd_clause (340)
-    on left: 453 454, on right: 451 452 546
-target_data_construct (341)
-    on left: 455, on right: 312
-target_data_directive (342)
-    on left: 456, on right: 455
-target_data_clause_optseq (343)
-    on left: 457 458 459, on right: 456 458 459
-target_data_clause (344)
-    on left: 460 461 462, on right: 458 459
-device_clause (345)
-    on left: 464, on right: 460 481 489
-$@16 (346)
-    on left: 463, on right: 464
-map_clause (347)
-    on left: 466 468, on right: 461 482
-$@17 (348)
-    on left: 465, on right: 466
-$@18 (349)
-    on left: 467, on right: 468
-map_type (350)
-    on left: 469 470 471 472, on right: 466
-target_construct (351)
-    on left: 474, on right: 313
-@19 (352)
-    on left: 473, on right: 474
-target_directive (353)
-    on left: 475, on right: 474
-target_clause_optseq (354)
-    on left: 476 477 478, on right: 475 477 478
-target_clause (355)
-    on left: 479 480, on right: 477 478 552 576 583
-unique_target_clause (356)
-    on left: 481 482, on right: 479 597 611
-target_update_construct (357)
-    on left: 483, on right: 314
-target_update_directive (358)
-    on left: 484, on right: 483
-target_update_clause_seq (359)
-    on left: 485 486 487, on right: 484 486 487
-target_update_clause (360)
-    on left: 488 489 490, on right: 485 486 487
-motion_clause (361)
-    on left: 492 494, on right: 488
-$@20 (362)
-    on left: 491, on right: 492
-$@21 (363)
-    on left: 493, on right: 494
-declare_target_construct (364)
-    on left: 495, on right: 95
-declare_target_directive (365)
-    on left: 496, on right: 495
-end_declare_target_directive (366)
-    on left: 497, on right: 495
-teams_construct (367)
-    on left: 498, on right: 315
-teams_directive (368)
-    on left: 499, on right: 498
-teams_clause_optseq (369)
-    on left: 500 501 502, on right: 499 501 502
-teams_clause (370)
-    on left: 503 504 505 506 507 508, on right: 501 502 553 559
-unique_teams_clause (371)
-    on left: 510 512, on right: 503 567 590 604
-$@22 (372)
-    on left: 509, on right: 510
-$@23 (373)
-    on left: 511, on right: 512
-distribute_construct (374)
-    on left: 513, on right: 316
-distribute_directive (375)
-    on left: 514, on right: 513
-distribute_clause_optseq (376)
-    on left: 515 516 517, on right: 514 516 517
-distribute_clause (377)
-    on left: 518 519 520 521, on right: 516 517
-unique_distribute_clause (378)
-    on left: 522 524, on right: 521 530 538 545 560
-$@24 (379)
-    on left: 523, on right: 524
-distribute_simd_construct (380)
-    on left: 525, on right: 317
-distribute_simd_directive (381)
-    on left: 526, on right: 525
-distribute_simd_clause_optseq (382)
-    on left: 527 528 529, on right: 526 528 529
-distribute_simd_clause (383)
-    on left: 530 531 532, on right: 528 529 570
-distribute_parallel_for_construct (384)
-    on left: 533, on right: 318
-distribute_parallel_for_directive (385)
-    on left: 534, on right: 533
-distribute_parallel_for_clause_optseq (386)
-    on left: 535 536 537, on right: 534 536 537
-distribute_parallel_for_clause (387)
-    on left: 538 539, on right: 536 537 591
-distribute_parallel_for_simd_construct (388)
-    on left: 540, on right: 319
-distribute_parallel_for_simd_directive (389)
-    on left: 541, on right: 540
-distribute_parallel_for_simd_clause_optseq (390)
-    on left: 542 543 544, on right: 541 543 544
-distribute_parallel_for_simd_clause (391)
-    on left: 545 546, on right: 543 544 605
-target_teams_construct (392)
-    on left: 547, on right: 320
-target_teams_directive (393)
-    on left: 548, on right: 547
-target_teams_clause_optseq (394)
-    on left: 549 550 551, on right: 548 550 551
-target_teams_clause (395)
-    on left: 552 553, on right: 550 551
-teams_distribute_construct (396)
-    on left: 554, on right: 321
-teams_distribute_directive (397)
-    on left: 555, on right: 554
-teams_distribute_clause_optseq (398)
-    on left: 556 557 558, on right: 555 557 558
-teams_distribute_clause (399)
-    on left: 559 560 561, on right: 557 558 577
-teams_distribute_simd_construct (400)
-    on left: 562, on right: 322
-teams_distribute_simd_directive (401)
-    on left: 563, on right: 562
-teams_distribute_simd_clause_optseq (402)
-    on left: 564 565 566, on right: 563 565 566
-teams_distribute_simd_clause (403)
-    on left: 567 568 569 570, on right: 565 566 584
-target_teams_distribute_construct (404)
-    on left: 571, on right: 323
-target_teams_distribute_directive (405)
-    on left: 572, on right: 571
-target_teams_distribute_clause_optseq (406)
-    on left: 573 574 575, on right: 572 574 575
-target_teams_distribute_clause (407)
-    on left: 576 577, on right: 574 575
-target_teams_distribute_simd_construct (408)
-    on left: 578, on right: 324
-target_teams_distribute_simd_directive (409)
-    on left: 579, on right: 578
-target_teams_distribute_simd_clause_optseq (410)
-    on left: 580 581 582, on right: 579 581 582
-target_teams_distribute_simd_clause (411)
-    on left: 583 584, on right: 581 582
-teams_distribute_parallel_for_construct (412)
-    on left: 585, on right: 325
-teams_distribute_parallel_for_directive (413)
-    on left: 586, on right: 585
-teams_distribute_parallel_for_clause_optseq (414)
-    on left: 587 588 589, on right: 586 588 589
-teams_distribute_parallel_for_clause (415)
-    on left: 590 591, on right: 588 589 598
-target_teams_distribute_parallel_for_construct (416)
-    on left: 592, on right: 326
-target_teams_distribute_parallel_for_directive (417)
-    on left: 593, on right: 592
-target_teams_distribute_parallel_for_clause_optseq (418)
-    on left: 594 595 596, on right: 593 595 596
-target_teams_distribute_parallel_for_clause (419)
-    on left: 597 598, on right: 595 596
-teams_distribute_parallel_for_simd_construct (420)
-    on left: 599, on right: 327
-teams_distribute_parallel_for_simd_directive (421)
-    on left: 600, on right: 599
-teams_distribute_parallel_for_simd_clause_optseq (422)
-    on left: 601 602 603, on right: 600 602 603
-teams_distribute_parallel_for_simd_clause (423)
-    on left: 604 605, on right: 602 603 612
-target_teams_distribute_parallel_for_simd_construct (424)
-    on left: 606, on right: 328
-target_teams_distribute_parallel_for_simd_directive (425)
-    on left: 607, on right: 606
-target_teams_distribute_parallel_for_simd_clause_optseq (426)
-    on left: 608 609 610, on right: 607 609 610
-target_teams_distribute_parallel_for_simd_clause (427)
-    on left: 611 612, on right: 609 610
-task_construct (428)
-    on left: 613, on right: 308
-task_directive (429)
-    on left: 614, on right: 613
-task_clause_optseq (430)
-    on left: 615 616 617, on right: 614 616 617
-task_clause (431)
-    on left: 618 619 620 621 622, on right: 616 617
-unique_task_clause (432)
-    on left: 623 625 626 627 628, on right: 618
-$@25 (433)
-    on left: 624, on right: 625
-dependence_type (434)
-    on left: 629 630 631, on right: 628
-parallel_for_construct (435)
-    on left: 632, on right: 302
-parallel_for_directive (436)
-    on left: 633, on right: 632
-parallel_for_clause_optseq (437)
-    on left: 634 635 636, on right: 633 635 636
-parallel_for_clause (438)
-    on left: 637 638 639 640 641 642 643 644, on right: 453 539 635
-    636
-parallel_sections_construct (439)
-    on left: 645, on right: 303
-parallel_sections_directive (440)
-    on left: 646, on right: 645
-parallel_sections_clause_optseq (441)
-    on left: 647 648 649, on right: 646 648 649
-parallel_sections_clause (442)
-    on left: 650 651 652 653 654 655 656, on right: 648 649
-master_construct (443)
-    on left: 657, on right: 304
-master_directive (444)
-    on left: 658, on right: 657
-critical_construct (445)
-    on left: 659, on right: 305
-critical_directive (446)
-    on left: 660 661, on right: 659
-region_phrase (447)
-    on left: 662, on right: 661
-barrier_directive (448)
-    on left: 663, on right: 330
-taskwait_directive (449)
-    on left: 664, on right: 332
-taskgroup_construct (450)
-    on left: 665, on right: 329
-taskgroup_directive (451)
-    on left: 666, on right: 665
-taskyield_directive (452)
-    on left: 667, on right: 333
-atomic_construct (453)
-    on left: 668, on right: 306
-atomic_directive (454)
-    on left: 669, on right: 668
-atomic_clause_opt (455)
-    on left: 670 671 672 673 674, on right: 669
-seq_cst_clause_opt (456)
-    on left: 675 676, on right: 669
-flush_directive (457)
-    on left: 677 678, on right: 331
-flush_vars (458)
-    on left: 680, on right: 678
-$@26 (459)
-    on left: 679, on right: 680
-ordered_construct (460)
-    on left: 681, on right: 307
-ordered_directive (461)
-    on left: 682, on right: 681
-cancel_directive (462)
-    on left: 683 684 685, on right: 334
-construct_type_clause (463)
-    on left: 686 687 688 689, on right: 683 684 685 690
-cancellation_point_directive (464)
-    on left: 690, on right: 335
-threadprivate_directive (465)
-    on left: 693, on right: 93
-$@27 (466)
-    on left: 691, on right: 693
-$@28 (467)
-    on left: 692, on right: 693
-declare_reduction_directive (468)
-    on left: 696, on right: 96
-$@29 (469)
-    on left: 694, on right: 696
-$@30 (470)
-    on left: 695, on right: 696
-reduction_identifier (471)
-    on left: 697 698 699 700 701 702 703 704 705 706 707, on right:
-    696 725 777
-reduction_type_list (472)
-    on left: 708 709, on right: 696 709
-initializer_clause_opt (473)
-    on left: 710 711 712, on right: 696
-data_default_clause (474)
-    on left: 713 714 715, on right: 343 504 568 619 639 651
-data_privatization_clause (475)
-    on left: 717, on right: 344 362 385 401 412 505 518 620 640 652
-$@31 (476)
-    on left: 716, on right: 717
-data_privatization_in_clause (477)
-    on left: 719, on right: 345 363 386 402 506 519 531 621 641 653
-$@32 (478)
-    on left: 718, on right: 719
-data_privatization_out_clause (479)
-    on left: 721, on right: 364 387 413 642 654
-$@33 (480)
-    on left: 720, on right: 721
-data_sharing_clause (481)
-    on left: 723, on right: 346 507 569 622 643 655
-$@34 (482)
-    on left: 722, on right: 723
-data_reduction_clause (483)
-    on left: 725, on right: 347 365 388 414 508 644 656
-$@35 (484)
-    on left: 724, on right: 725
-if_clause (485)
-    on left: 727, on right: 348 462 480 490 623 684 685
-$@36 (486)
-    on left: 726, on right: 727
-collapse_clause (487)
-    on left: 728, on right: 373 415 520 561
-array_section (488)
-    on left: 729, on right: 733 735
-variable_list (489)
-    on left: 730 731, on right: 352 355 405 422 424 426 680 717 719
-    721 723 725 731
-variable_array_section_list (490)
-    on left: 732 733 734 735, on right: 466 468 492 494 628 734 735
-array_section_subscript (491)
-    on left: 737 739, on right: 729 737
-$@37 (492)
-    on left: 736, on right: 737
-$@38 (493)
-    on left: 738, on right: 739
-array_section_plain (494)
-    on left: 740 741, on right: 737 739
-procbind_clause (495)
-    on left: 742 743 744, on right: 353
-thrprv_variable_list (496)
-    on left: 745 746, on right: 693 746
-ompix_directive (497)
-    on left: 747 748, on right: 250
-ox_tasksync_directive (498)
-    on left: 749, on right: 747
-ox_taskschedule_directive (499)
-    on left: 751, on right: 748
-$@39 (500)
-    on left: 750, on right: 751
-ox_taskschedule_clause_optseq (501)
-    on left: 752 753 754, on right: 751 753 754
-ox_taskschedule_clause (502)
-    on left: 755 756 757 758 759, on right: 753 754
-ox_scope_spec (503)
-    on left: 760 761 762 763, on right: 757
-ompix_construct (504)
-    on left: 764 765, on right: 236
-ox_taskdef_construct (505)
-    on left: 767 768, on right: 280 764
-$@40 (506)
-    on left: 766, on right: 767
-ox_taskdef_directive (507)
-    on left: 770, on right: 767 768
-$@41 (508)
-    on left: 769, on right: 770
-ox_taskdef_clause_optseq (509)
-    on left: 771 772 773, on right: 770 772 773
-ox_taskdef_clause (510)
-    on left: 774 775 776 777, on right: 772 773
-ox_variable_size_list (511)
-    on left: 778 779, on right: 774 775 776 777 779
-ox_variable_size_elem (512)
-    on left: 780 781 782, on right: 778 779
-ox_task_construct (513)
-    on left: 783, on right: 765
-ox_task_directive (514)
-    on left: 784, on right: 783
-ox_task_clause_optseq (515)
-    on left: 785 786 787, on right: 784 786 787
-ox_task_clause (516)
-    on left: 788 789 790 791 792 793, on right: 786 787
-ox_funccall_expression (517)
-    on left: 794 795, on right: 783
+    $accept (197)
+        on left: 0
+    start_trick <type> (198)
+        on left: 1 2 3 4
+        on right: 0
+    enumeration_constant <symb> (199)
+        on left: 5
+        on right: 158 159
+    string_literal <string> (200)
+        on left: 6 7
+        on right: 7 10
+    primary_expression <expr> (201)
+        on left: 8 9 10 11
+        on right: 12
+    postfix_expression <expr> (202)
+        on left: 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+        on right: 13 16 17 18 19 20 21 22 23 28
+    argument_expression_list <expr> (203)
+        on left: 26 27
+        on right: 15 17 27 712 795
+    unary_expression <expr> (204)
+        on left: 28 29 30 31 32 33 34 35 36
+        on right: 29 30 32 43 76
+    unary_operator <type> (205)
+        on left: 37 38 39 40 41 42
+        on right: 31
+    cast_expression <expr> (206)
+        on left: 43 44
+        on right: 31 44 45 46 47 48
+    multiplicative_expression <expr> (207)
+        on left: 45 46 47 48
+        on right: 46 47 48 49 50 51
+    additive_expression <expr> (208)
+        on left: 49 50 51
+        on right: 50 51 52 53 54
+    shift_expression <expr> (209)
+        on left: 52 53 54
+        on right: 53 54 55 56 57 58 59
+    relational_expression <expr> (210)
+        on left: 55 56 57 58 59
+        on right: 56 57 58 59 60 61 62
+    equality_expression <expr> (211)
+        on left: 60 61 62
+        on right: 61 62 63 64
+    AND_expression <expr> (212)
+        on left: 63 64
+        on right: 64 65 66
+    exclusive_OR_expression <expr> (213)
+        on left: 65 66
+        on right: 66 67 68
+    inclusive_OR_expression <expr> (214)
+        on left: 67 68
+        on right: 68 69 70
+    logical_AND_expression <expr> (215)
+        on left: 69 70
+        on right: 70 71 72
+    logical_OR_expression <expr> (216)
+        on left: 71 72
+        on right: 72 73 74
+    conditional_expression <expr> (217)
+        on left: 73 74
+        on right: 74 75 90 711
+    assignment_expression <expr> (218)
+        on left: 75 76
+        on right: 26 27 34 76 88 89 170 171 172 173 174 207 208 216 755 756 782 789 790
+    assignment_operator <type> (219)
+        on left: 77 78 79 80 81 82 83 84 85 86 87
+        on right: 76
+    expression <expr> (220)
+        on left: 88 89
+        on right: 2 11 13 74 89 252 253 254 255 256 257 260 261 262 263 264 265 266 268 269 270 275 350 370 372 416 428 436 464 510 512 524 625 696 727 728 740 741
+    constant_expression <expr> (221)
+        on left: 90
+        on right: 149 150 159 226 240
+    declaration <stmt> (222)
+        on left: 91 92 93 94 95 96
+        on right: 247 267 268 269 270 279 291 292 294
+    declaration_specifiers <spec> (223)
+        on left: 97 98 99 100 101 102 103 104
+        on right: 91 92 98 100 102 104 194 195 196 284 288
+    init_declarator_list <decl> (224)
+        on left: 105 106
+        on right: 92 106
+    init_declarator <decl> (225)
+        on left: 107 109
+        on right: 105 106
+    $@1 (226)
+        on left: 108
+        on right: 109
+    storage_class_specifier <spec> (227)
+        on left: 110 111 112 113 114
+        on right: 97 98
+    type_specifier <spec> (228)
+        on left: 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129
+        on right: 99 100 142 143 708 709
+    struct_or_union_specifier <spec> (229)
+        on left: 130 131 132 133 134 135
+        on right: 127
+    struct_or_union <type> (230)
+        on left: 136 137
+        on right: 130 131 132 133 134 135
+    struct_declaration_list <decl> (231)
+        on left: 138 139
+        on right: 130 132 133 139
+    struct_declaration <decl> (232)
+        on left: 140 141
+        on right: 138 139
+    specifier_qualifier_list <spec> (233)
+        on left: 142 143 144 145
+        on right: 140 141 143 145 199 200
+    struct_declarator_list <decl> (234)
+        on left: 146 147
+        on right: 140 147
+    struct_declarator <decl> (235)
+        on left: 148 149 150
+        on right: 146 147
+    enum_specifier <spec> (236)
+        on left: 151 152 153 154 155
+        on right: 128
+    enumerator_list <spec> (237)
+        on left: 156 157
+        on right: 151 152 153 154 157
+    enumerator <spec> (238)
+        on left: 158 159
+        on right: 156 157
+    type_qualifier <spec> (239)
+        on left: 160 161 162
+        on right: 101 102 144 145 188 189
+    function_specifier <spec> (240)
+        on left: 163
+        on right: 103 104
+    declarator <decl> (241)
+        on left: 164 165
+        on right: 107 109 148 149 167 194 284 286 288 290
+    direct_declarator <decl> (242)
+        on left: 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183
+        on right: 164 165 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183
+    pointer <spec> (243)
+        on left: 184 185 186 187
+        on right: 165 186 187 201 203
+    type_qualifier_list <spec> (244)
+        on left: 188 189
+        on right: 169 171 173 174 176 185 187 189
+    parameter_type_list <decl> (245)
+        on left: 190 191
+        on right: 177 213 214
+    parameter_list <decl> (246)
+        on left: 192 193
+        on right: 180 181 182 190 191 193
+    parameter_declaration <decl> (247)
+        on left: 194 195 196
+        on right: 192 193
+    identifier_list <decl> (248)
+        on left: 197 198
+        on right: 179 198
+    type_name <decl> (249)
+        on left: 199 200
+        on right: 24 25 33 34 35 36 44
+    abstract_declarator <decl> (250)
+        on left: 201 202 203
+        on right: 196 200 204
+    direct_abstract_declarator <decl> (251)
+        on left: 204 205 206 207 208 209 210 211 212 213 214
+        on right: 202 203 206 208 210 212 214
+    typedef_name <symb> (252)
+        on left: 215
+        on right: 20 21 129 133 135 228
+    initializer <expr> (253)
+        on left: 216 217 218
+        on right: 109 219 220 221 222
+    initializer_list <expr> (254)
+        on left: 219 220 221 222
+        on right: 24 25 217 218 221 222
+    designation <expr> (255)
+        on left: 223
+        on right: 220 222
+    designator_list <expr> (256)
+        on left: 224 225
+        on right: 223 225
+    designator <expr> (257)
+        on left: 226 227 228
+        on right: 224 225
+    statement <stmt> (258)
+        on left: 229 230 231 232 233 234 235 236
+        on right: 237 239 248 253 254 255 256 257 259 260 261 262 263 264 265 266 267 268 269 270 336
+    statement_for_labeled <stmt> (259)
+        on left: 237 238
+        on right: 240 241
+    labeled_statement <stmt> (260)
+        on left: 239 240 241
+        on right: 229
+    compound_statement <stmt> (261)
+        on left: 242 244
+        on right: 230 284 286 288 290 767
+    @2 (262)
+        on left: 243
+        on right: 244
+    block_item_list <stmt> (263)
+        on left: 245 246
+        on right: 3 244 246
+    block_item <stmt> (264)
+        on left: 247 248 249 250
+        on right: 245 246
+    expression_statement <stmt> (265)
+        on left: 251 252
+        on right: 231 668
+    selection_statement <stmt> (266)
+        on left: 253 254 255
+        on right: 232
+    iteration_statement <stmt> (267)
+        on left: 256 257 258
+        on right: 233
+    iteration_statement_for <stmt> (268)
+        on left: 259 260 261 262 263 264 265 266 267 268 269 270
+        on right: 258 356 406 441 448 513 525 533 554 562 571 578 585 592 599 606 632
+    jump_statement <stmt> (269)
+        on left: 271 272 273 274 275
+        on right: 234
+    translation_unit <stmt> (270)
+        on left: 276 277
+        on right: 1 4 277
+    external_declaration <stmt> (271)
+        on left: 278 279 280
+        on right: 276 277
+    function_definition <stmt> (272)
+        on left: 281 282
+        on right: 278 293 295
+    normal_function_definition <stmt> (273)
+        on left: 284 286
+        on right: 281 767 768
+    $@3 (274)
+        on left: 283
+        on right: 284
+    $@4 (275)
+        on left: 285
+        on right: 286
+    oldstyle_function_definition <stmt> (276)
+        on left: 288 290
+        on right: 282
+    $@5 (277)
+        on left: 287
+        on right: 288
+    $@6 (278)
+        on left: 289
+        on right: 290
+    declaration_list <stmt> (279)
+        on left: 291 292
+        on right: 288 290 292
+    declaration_definition <stmt> (280)
+        on left: 293 294
+        on right: 296 297
+    function_statement <stmt> (281)
+        on left: 295
+        on right: 429
+    declarations_definitions_seq <stmt> (282)
+        on left: 296 297
+        on right: 297 495
+    openmp_construct <ocon> (283)
+        on left: 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329
+        on right: 235
+    openmp_directive <ocon> (284)
+        on left: 330 331 332 333 334 335
+        on right: 238 249
+    structured_block <stmt> (285)
+        on left: 336
+        on right: 337 391 392 393 395 455 474 498 540 547 613 657 659 665 681
+    parallel_construct <ocon> (286)
+        on left: 337
+        on right: 298
+    parallel_directive <odir> (287)
+        on left: 338
+        on right: 337
+    parallel_clause_optseq <ocla> (288)
+        on left: 339 340 341
+        on right: 338 340 341
+    parallel_clause <ocla> (289)
+        on left: 342 343 344 345 346 347
+        on right: 340 341
+    unique_parallel_clause <ocla> (290)
+        on left: 348 350 352 353 355
+        on right: 342 637 650
+    $@7 (291)
+        on left: 349
+        on right: 350
+    $@8 (292)
+        on left: 351
+        on right: 352
+    $@9 (293)
+        on left: 354
+        on right: 355
+    for_construct <ocon> (294)
+        on left: 356
+        on right: 299
+    for_directive <odir> (295)
+        on left: 357
+        on right: 356
+    for_clause_optseq <ocla> (296)
+        on left: 358 359 360
+        on right: 357 359 360
+    for_clause <ocla> (297)
+        on left: 361 362 363 364 365 366
+        on right: 359 360 446
+    unique_for_clause <ocla> (298)
+        on left: 367 368 370 372 373
+        on right: 361 638
+    $@10 (299)
+        on left: 369
+        on right: 370
+    $@11 (300)
+        on left: 371
+        on right: 372
+    schedule_kind <type> (301)
+        on left: 374 375 376 377 378 379
+        on right: 368 370
+    sections_construct <ocon> (302)
+        on left: 380
+        on right: 300
+    sections_directive <odir> (303)
+        on left: 381
+        on right: 380
+    sections_clause_optseq <ocla> (304)
+        on left: 382 383 384
+        on right: 381 383 384
+    sections_clause <ocla> (305)
+        on left: 385 386 387 388 389
+        on right: 383 384
+    section_scope <stmt> (306)
+        on left: 390
+        on right: 380 645
+    section_sequence <stmt> (307)
+        on left: 391 392 393
+        on right: 390 393
+    section_directive <odir> (308)
+        on left: 394
+        on right: 392 393
+    single_construct <ocon> (309)
+        on left: 395
+        on right: 301
+    single_directive <odir> (310)
+        on left: 396
+        on right: 395
+    single_clause_optseq <ocla> (311)
+        on left: 397 398 399
+        on right: 396 398 399
+    single_clause <ocla> (312)
+        on left: 400 401 402 403
+        on right: 398 399
+    unique_single_clause <ocla> (313)
+        on left: 405
+        on right: 400
+    $@12 (314)
+        on left: 404
+        on right: 405
+    simd_construct <ocon> (315)
+        on left: 406
+        on right: 309
+    simd_directive <odir> (316)
+        on left: 407
+        on right: 406
+    simd_clause_optseq <ocla> (317)
+        on left: 408 409 410
+        on right: 407 409 410
+    simd_clause <ocla> (318)
+        on left: 411 412 413 414 415
+        on right: 409 410 532
+    unique_simd_clause <ocla> (319)
+        on left: 416 417 418
+        on right: 411 447 454
+    inbranch_clause <ocla> (320)
+        on left: 419 420
+        on right: 440
+    uniform_clause <ocla> (321)
+        on left: 422
+        on right: 439
+    $@13 (322)
+        on left: 421
+        on right: 422
+    linear_clause <ocla> (323)
+        on left: 424
+        on right: 417 437
+    $@14 (324)
+        on left: 423
+        on right: 424
+    aligned_clause <ocla> (325)
+        on left: 426
+        on right: 418 438
+    $@15 (326)
+        on left: 425
+        on right: 426
+    optional_expression <expr> (327)
+        on left: 427 428
+        on right: 424 426
+    declare_simd_construct <ocon> (328)
+        on left: 429
+        on right: 94
+    declare_simd_directive_seq (329)
+        on left: 430 431
+        on right: 429 431
+    declare_simd_directive <odir> (330)
+        on left: 432
+        on right: 430 431
+    declare_simd_clause_optseq <ocla> (331)
+        on left: 433 434 435
+        on right: 432 434 435
+    declare_simd_clause <ocla> (332)
+        on left: 436 437 438 439 440
+        on right: 434 435
+    for_simd_construct <ocon> (333)
+        on left: 441
+        on right: 310
+    for_simd_directive <odir> (334)
+        on left: 442
+        on right: 441
+    for_simd_clause_optseq <ocla> (335)
+        on left: 443 444 445
+        on right: 442 444 445
+    for_simd_clause <ocla> (336)
+        on left: 446 447
+        on right: 444 445
+    parallel_for_simd_construct <ocon> (337)
+        on left: 448
+        on right: 311
+    parallel_for_simd_directive <odir> (338)
+        on left: 449
+        on right: 448
+    parallel_for_simd_clause_optseq <ocla> (339)
+        on left: 450 451 452
+        on right: 449 451 452
+    parallel_for_simd_clause <ocla> (340)
+        on left: 453 454
+        on right: 451 452 546
+    target_data_construct <ocon> (341)
+        on left: 455
+        on right: 312
+    target_data_directive <odir> (342)
+        on left: 456
+        on right: 455
+    target_data_clause_optseq <ocla> (343)
+        on left: 457 458 459
+        on right: 456 458 459
+    target_data_clause <ocla> (344)
+        on left: 460 461 462
+        on right: 458 459
+    device_clause <ocla> (345)
+        on left: 464
+        on right: 460 481 489
+    $@16 (346)
+        on left: 463
+        on right: 464
+    map_clause <ocla> (347)
+        on left: 466 468
+        on right: 461 482
+    $@17 (348)
+        on left: 465
+        on right: 466
+    $@18 (349)
+        on left: 467
+        on right: 468
+    map_type <type> (350)
+        on left: 469 470 471 472
+        on right: 466
+    target_construct <ocon> (351)
+        on left: 474
+        on right: 313
+    @19 (352)
+        on left: 473
+        on right: 474
+    target_directive <odir> (353)
+        on left: 475
+        on right: 474
+    target_clause_optseq <ocla> (354)
+        on left: 476 477 478
+        on right: 475 477 478
+    target_clause <ocla> (355)
+        on left: 479 480
+        on right: 477 478 552 576 583
+    unique_target_clause <ocla> (356)
+        on left: 481 482
+        on right: 479 597 611
+    target_update_construct <ocon> (357)
+        on left: 483
+        on right: 314
+    target_update_directive <odir> (358)
+        on left: 484
+        on right: 483
+    target_update_clause_seq <ocla> (359)
+        on left: 485 486 487
+        on right: 484 486 487
+    target_update_clause <ocla> (360)
+        on left: 488 489 490
+        on right: 485 486 487
+    motion_clause <ocla> (361)
+        on left: 492 494
+        on right: 488
+    $@20 (362)
+        on left: 491
+        on right: 492
+    $@21 (363)
+        on left: 493
+        on right: 494
+    declare_target_construct <ocon> (364)
+        on left: 495
+        on right: 95
+    declare_target_directive <odir> (365)
+        on left: 496
+        on right: 495
+    end_declare_target_directive <odir> (366)
+        on left: 497
+        on right: 495
+    teams_construct <ocon> (367)
+        on left: 498
+        on right: 315
+    teams_directive <odir> (368)
+        on left: 499
+        on right: 498
+    teams_clause_optseq <ocla> (369)
+        on left: 500 501 502
+        on right: 499 501 502
+    teams_clause <ocla> (370)
+        on left: 503 504 505 506 507 508
+        on right: 501 502 553 559
+    unique_teams_clause <ocla> (371)
+        on left: 510 512
+        on right: 503 567 590 604
+    $@22 (372)
+        on left: 509
+        on right: 510
+    $@23 (373)
+        on left: 511
+        on right: 512
+    distribute_construct <ocon> (374)
+        on left: 513
+        on right: 316
+    distribute_directive <odir> (375)
+        on left: 514
+        on right: 513
+    distribute_clause_optseq <ocla> (376)
+        on left: 515 516 517
+        on right: 514 516 517
+    distribute_clause <ocla> (377)
+        on left: 518 519 520 521
+        on right: 516 517
+    unique_distribute_clause <ocla> (378)
+        on left: 522 524
+        on right: 521 530 538 545 560
+    $@24 (379)
+        on left: 523
+        on right: 524
+    distribute_simd_construct <ocon> (380)
+        on left: 525
+        on right: 317
+    distribute_simd_directive <odir> (381)
+        on left: 526
+        on right: 525
+    distribute_simd_clause_optseq <ocla> (382)
+        on left: 527 528 529
+        on right: 526 528 529
+    distribute_simd_clause <ocla> (383)
+        on left: 530 531 532
+        on right: 528 529 570
+    distribute_parallel_for_construct <ocon> (384)
+        on left: 533
+        on right: 318
+    distribute_parallel_for_directive <odir> (385)
+        on left: 534
+        on right: 533
+    distribute_parallel_for_clause_optseq <ocla> (386)
+        on left: 535 536 537
+        on right: 534 536 537
+    distribute_parallel_for_clause <ocla> (387)
+        on left: 538 539
+        on right: 536 537 591
+    distribute_parallel_for_simd_construct <ocon> (388)
+        on left: 540
+        on right: 319
+    distribute_parallel_for_simd_directive <odir> (389)
+        on left: 541
+        on right: 540
+    distribute_parallel_for_simd_clause_optseq <ocla> (390)
+        on left: 542 543 544
+        on right: 541 543 544
+    distribute_parallel_for_simd_clause <ocla> (391)
+        on left: 545 546
+        on right: 543 544 605
+    target_teams_construct <ocon> (392)
+        on left: 547
+        on right: 320
+    target_teams_directive <odir> (393)
+        on left: 548
+        on right: 547
+    target_teams_clause_optseq <ocla> (394)
+        on left: 549 550 551
+        on right: 548 550 551
+    target_teams_clause <ocla> (395)
+        on left: 552 553
+        on right: 550 551
+    teams_distribute_construct <ocon> (396)
+        on left: 554
+        on right: 321
+    teams_distribute_directive <odir> (397)
+        on left: 555
+        on right: 554
+    teams_distribute_clause_optseq <ocla> (398)
+        on left: 556 557 558
+        on right: 555 557 558
+    teams_distribute_clause <ocla> (399)
+        on left: 559 560 561
+        on right: 557 558 577
+    teams_distribute_simd_construct <ocon> (400)
+        on left: 562
+        on right: 322
+    teams_distribute_simd_directive <odir> (401)
+        on left: 563
+        on right: 562
+    teams_distribute_simd_clause_optseq <ocla> (402)
+        on left: 564 565 566
+        on right: 563 565 566
+    teams_distribute_simd_clause <ocla> (403)
+        on left: 567 568 569 570
+        on right: 565 566 584
+    target_teams_distribute_construct <ocon> (404)
+        on left: 571
+        on right: 323
+    target_teams_distribute_directive <odir> (405)
+        on left: 572
+        on right: 571
+    target_teams_distribute_clause_optseq <ocla> (406)
+        on left: 573 574 575
+        on right: 572 574 575
+    target_teams_distribute_clause <ocla> (407)
+        on left: 576 577
+        on right: 574 575
+    target_teams_distribute_simd_construct <ocon> (408)
+        on left: 578
+        on right: 324
+    target_teams_distribute_simd_directive <odir> (409)
+        on left: 579
+        on right: 578
+    target_teams_distribute_simd_clause_optseq <ocla> (410)
+        on left: 580 581 582
+        on right: 579 581 582
+    target_teams_distribute_simd_clause <ocla> (411)
+        on left: 583 584
+        on right: 581 582
+    teams_distribute_parallel_for_construct <ocon> (412)
+        on left: 585
+        on right: 325
+    teams_distribute_parallel_for_directive <odir> (413)
+        on left: 586
+        on right: 585
+    teams_distribute_parallel_for_clause_optseq <ocla> (414)
+        on left: 587 588 589
+        on right: 586 588 589
+    teams_distribute_parallel_for_clause <ocla> (415)
+        on left: 590 591
+        on right: 588 589 598
+    target_teams_distribute_parallel_for_construct <ocon> (416)
+        on left: 592
+        on right: 326
+    target_teams_distribute_parallel_for_directive <odir> (417)
+        on left: 593
+        on right: 592
+    target_teams_distribute_parallel_for_clause_optseq <ocla> (418)
+        on left: 594 595 596
+        on right: 593 595 596
+    target_teams_distribute_parallel_for_clause <ocla> (419)
+        on left: 597 598
+        on right: 595 596
+    teams_distribute_parallel_for_simd_construct <ocon> (420)
+        on left: 599
+        on right: 327
+    teams_distribute_parallel_for_simd_directive <odir> (421)
+        on left: 600
+        on right: 599
+    teams_distribute_parallel_for_simd_clause_optseq <ocla> (422)
+        on left: 601 602 603
+        on right: 600 602 603
+    teams_distribute_parallel_for_simd_clause <ocla> (423)
+        on left: 604 605
+        on right: 602 603 612
+    target_teams_distribute_parallel_for_simd_construct <ocon> (424)
+        on left: 606
+        on right: 328
+    target_teams_distribute_parallel_for_simd_directive <odir> (425)
+        on left: 607
+        on right: 606
+    target_teams_distribute_parallel_for_simd_clause_optseq <ocla> (426)
+        on left: 608 609 610
+        on right: 607 609 610
+    target_teams_distribute_parallel_for_simd_clause <ocla> (427)
+        on left: 611 612
+        on right: 609 610
+    task_construct <ocon> (428)
+        on left: 613
+        on right: 308
+    task_directive <odir> (429)
+        on left: 614
+        on right: 613
+    task_clause_optseq <ocla> (430)
+        on left: 615 616 617
+        on right: 614 616 617
+    task_clause <ocla> (431)
+        on left: 618 619 620 621 622
+        on right: 616 617
+    unique_task_clause <ocla> (432)
+        on left: 623 625 626 627 628
+        on right: 618
+    $@25 (433)
+        on left: 624
+        on right: 625
+    dependence_type <type> (434)
+        on left: 629 630 631
+        on right: 628
+    parallel_for_construct <ocon> (435)
+        on left: 632
+        on right: 302
+    parallel_for_directive <odir> (436)
+        on left: 633
+        on right: 632
+    parallel_for_clause_optseq <ocla> (437)
+        on left: 634 635 636
+        on right: 633 635 636
+    parallel_for_clause <ocla> (438)
+        on left: 637 638 639 640 641 642 643 644
+        on right: 453 539 635 636
+    parallel_sections_construct <ocon> (439)
+        on left: 645
+        on right: 303
+    parallel_sections_directive <odir> (440)
+        on left: 646
+        on right: 645
+    parallel_sections_clause_optseq <ocla> (441)
+        on left: 647 648 649
+        on right: 646 648 649
+    parallel_sections_clause <ocla> (442)
+        on left: 650 651 652 653 654 655 656
+        on right: 648 649
+    master_construct <ocon> (443)
+        on left: 657
+        on right: 304
+    master_directive <odir> (444)
+        on left: 658
+        on right: 657
+    critical_construct <ocon> (445)
+        on left: 659
+        on right: 305
+    critical_directive <odir> (446)
+        on left: 660 661
+        on right: 659
+    region_phrase <symb> (447)
+        on left: 662
+        on right: 661
+    barrier_directive <odir> (448)
+        on left: 663
+        on right: 330
+    taskwait_directive <odir> (449)
+        on left: 664
+        on right: 332
+    taskgroup_construct <ocon> (450)
+        on left: 665
+        on right: 329
+    taskgroup_directive <odir> (451)
+        on left: 666
+        on right: 665
+    taskyield_directive <odir> (452)
+        on left: 667
+        on right: 333
+    atomic_construct <ocon> (453)
+        on left: 668
+        on right: 306
+    atomic_directive <odir> (454)
+        on left: 669
+        on right: 668
+    atomic_clause_opt <ocla> (455)
+        on left: 670 671 672 673 674
+        on right: 669
+    seq_cst_clause_opt <ocla> (456)
+        on left: 675 676
+        on right: 669
+    flush_directive <odir> (457)
+        on left: 677 678
+        on right: 331
+    flush_vars <decl> (458)
+        on left: 680
+        on right: 678
+    $@26 (459)
+        on left: 679
+        on right: 680
+    ordered_construct <ocon> (460)
+        on left: 681
+        on right: 307
+    ordered_directive <odir> (461)
+        on left: 682
+        on right: 681
+    cancel_directive <odir> (462)
+        on left: 683 684 685
+        on right: 334
+    construct_type_clause <ocla> (463)
+        on left: 686 687 688 689
+        on right: 683 684 685 690
+    cancellation_point_directive <odir> (464)
+        on left: 690
+        on right: 335
+    threadprivate_directive <odir> (465)
+        on left: 693
+        on right: 93
+    $@27 (466)
+        on left: 691
+        on right: 693
+    $@28 (467)
+        on left: 692
+        on right: 693
+    declare_reduction_directive (468)
+        on left: 696
+        on right: 96
+    $@29 (469)
+        on left: 694
+        on right: 696
+    $@30 (470)
+        on left: 695
+        on right: 696
+    reduction_identifier <type> (471)
+        on left: 697 698 699 700 701 702 703 704 705 706 707
+        on right: 696 725 777
+    reduction_type_list <type> (472)
+        on left: 708 709
+        on right: 696 709
+    initializer_clause_opt <ocla> (473)
+        on left: 710 711 712
+        on right: 696
+    data_default_clause <ocla> (474)
+        on left: 713 714 715
+        on right: 343 504 568 619 639 651
+    data_privatization_clause <ocla> (475)
+        on left: 717
+        on right: 344 362 385 401 412 505 518 620 640 652
+    $@31 (476)
+        on left: 716
+        on right: 717
+    data_privatization_in_clause <ocla> (477)
+        on left: 719
+        on right: 345 363 386 402 506 519 531 621 641 653
+    $@32 (478)
+        on left: 718
+        on right: 719
+    data_privatization_out_clause <ocla> (479)
+        on left: 721
+        on right: 364 387 413 642 654
+    $@33 (480)
+        on left: 720
+        on right: 721
+    data_sharing_clause <ocla> (481)
+        on left: 723
+        on right: 346 507 569 622 643 655
+    $@34 (482)
+        on left: 722
+        on right: 723
+    data_reduction_clause <ocla> (483)
+        on left: 725
+        on right: 347 365 388 414 508 644 656
+    $@35 (484)
+        on left: 724
+        on right: 725
+    if_clause <ocla> (485)
+        on left: 727
+        on right: 348 462 480 490 623 684 685
+    $@36 (486)
+        on left: 726
+        on right: 727
+    collapse_clause <ocla> (487)
+        on left: 728
+        on right: 373 415 520 561
+    array_section <decl> (488)
+        on left: 729
+        on right: 733 735
+    variable_list <decl> (489)
+        on left: 730 731
+        on right: 352 355 405 422 424 426 680 717 719 721 723 725 731
+    variable_array_section_list <decl> (490)
+        on left: 732 733 734 735
+        on right: 466 468 492 494 628 734 735
+    array_section_subscript (491)
+        on left: 737 739
+        on right: 729 737
+    $@37 (492)
+        on left: 736
+        on right: 737
+    $@38 (493)
+        on left: 738
+        on right: 739
+    array_section_plain <decl> (494)
+        on left: 740 741
+        on right: 737 739
+    procbind_clause <ocla> (495)
+        on left: 742 743 744
+        on right: 353
+    thrprv_variable_list <decl> (496)
+        on left: 745 746
+        on right: 693 746
+    ompix_directive <xcon> (497)
+        on left: 747 748
+        on right: 250
+    ox_tasksync_directive <xdir> (498)
+        on left: 749
+        on right: 747
+    ox_taskschedule_directive <xdir> (499)
+        on left: 751
+        on right: 748
+    $@39 (500)
+        on left: 750
+        on right: 751
+    ox_taskschedule_clause_optseq <xcla> (501)
+        on left: 752 753 754
+        on right: 751 753 754
+    ox_taskschedule_clause <xcla> (502)
+        on left: 755 756 757 758 759
+        on right: 753 754
+    ox_scope_spec <type> (503)
+        on left: 760 761 762 763
+        on right: 757
+    ompix_construct <xcon> (504)
+        on left: 764 765
+        on right: 236
+    ox_taskdef_construct <xcon> (505)
+        on left: 767 768
+        on right: 280 764
+    $@40 (506)
+        on left: 766
+        on right: 767
+    ox_taskdef_directive <xdir> (507)
+        on left: 770
+        on right: 767 768
+    $@41 (508)
+        on left: 769
+        on right: 770
+    ox_taskdef_clause_optseq <xcla> (509)
+        on left: 771 772 773
+        on right: 770 772 773
+    ox_taskdef_clause <xcla> (510)
+        on left: 774 775 776 777
+        on right: 772 773
+    ox_variable_size_list <decl> (511)
+        on left: 778 779
+        on right: 774 775 776 777 779
+    ox_variable_size_elem <decl> (512)
+        on left: 780 781 782
+        on right: 778 779
+    ox_task_construct <xcon> (513)
+        on left: 783
+        on right: 765
+    ox_task_directive <xdir> (514)
+        on left: 784
+        on right: 783
+    ox_task_clause_optseq <xcla> (515)
+        on left: 785 786 787
+        on right: 784 786 787
+    ox_task_clause <xcla> (516)
+        on left: 788 789 790 791 792 793
+        on right: 786 787
+    ox_funccall_expression <expr> (517)
+        on left: 794 795
+        on right: 783
 
 
 State 0

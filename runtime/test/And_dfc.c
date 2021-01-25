@@ -5,8 +5,8 @@
 #include <sys/types.h>
 #include <pthread.h>
 
-#include "threadpool.h"
-#include "dfc.h"
+#include <threadpool.h>
+#include <dfc.h>
 #define TIME 1000000
 
 DF_FN DF_FN_RandBool1;

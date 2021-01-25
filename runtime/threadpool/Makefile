@@ -1,4 +1,4 @@
-CFLAGS = -D_REENTRANT -Wall -pedantic -Isrc -std=c99
+CFLAGS = -D_REENTRANT -Wall -pedantic -Isrc -std=c99 -O3
 LDLIBS = -lpthread
 
 ifdef DEBUG
@@ -7,7 +7,7 @@ LDFLAGS += -g
 endif
 
 TARGETS = tests/thrdtest tests/heavy tests/shutdown \
-	libthreadpool.so libthreadpool.a
+	libthreadpool.a
 
 all: $(TARGETS)
 
@@ -22,13 +22,13 @@ tests/heavy.o: tests/heavy.c src/threadpool.h
 shared: libthreadpool.so
 static: libthreadpool.a
 
-libthreadpool.so: src/threadpool.c src/threadpool.h
-	$(CC) -shared -fPIC ${CFLAGS} -o $@ $< ${LDLIBS}
+# libthreadpool.so: src/threadpool.c src/threadpool.h
+# 	$(CC) -shared -fPIC ${CFLAGS} -o $@ $< ${LDLIBS}
 
-src/libthreadpool.o: src/threadpool.c src/threadpool.h
-	$(CC) -c -fPIC ${CFLAGS} -o $@ $<
+# src/libthreadpool.o: src/threadpool.c src/threadpool.h
+# 	$(CC) -c -fPIC ${CFLAGS} -o $@ $<
 
-libthreadpool.a: src/libthreadpool.o
+libthreadpool.a: src/threadpool.o
 	ar rcs $@ $^
 
 clean:
@@ -39,3 +39,10 @@ test:
 	./tests/thrdtest
 	./tests/heavy
 
+install:
+	install -m644 src/threadpool.h ~/include/
+	install -m644 libthreadpool.a ~/lib/
+
+uninstall:
+	rm -f ~/include/threadpool.h
+	rm -f ~/lib/libthreadpool.a

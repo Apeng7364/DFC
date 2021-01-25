@@ -1,3 +1,6 @@
+#define _GNU_SOURCE
+
+
 #define THREAD 32
 #define QUEUE  256
 

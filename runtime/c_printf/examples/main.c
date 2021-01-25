@@ -1,4 +1,4 @@
-#include "../sources/c_printf.h"
+#include <c_printf.h>
 
 int main(int argc, char *argv[]) {
 	c_printf(" * [r]%s\n", "Red");
