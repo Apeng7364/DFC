@@ -1,0 +1,1 @@
+cmd_/home/apeng/Desktop/DFC_me/DFT/mod_dfc.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/apeng/Desktop/DFC_me/DFT/mod_dfc.ko /home/apeng/Desktop/DFC_me/DFT/mod_dfc.o /home/apeng/Desktop/DFC_me/DFT/mod_dfc.mod.o;  true
