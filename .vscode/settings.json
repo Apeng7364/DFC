@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "dtf_syscall.h": "c",
+        "module.h": "c",
+        "time.h": "c",
+        "kallsyms.h": "c",
+        "kernel.h": "c",
+        "sections.h": "c",
+        "unistd.h": "c",
+        "stat.h": "c",
+        "kmod.h": "c",
+        "compiler.h": "c",
+        "umh.h": "c",
+        "sysctl.h": "c",
+        "gfp.h": "c",
+        "stddef.h": "c",
+        "dft.h": "c",
+        "dft_syscall.h": "c",
+        "init.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "syscall.h": "c"
+    }
+}
