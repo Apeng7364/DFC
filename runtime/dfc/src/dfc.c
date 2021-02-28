@@ -144,6 +144,7 @@ void DF_AD_UpData(int DF_Count, DF_TFL *table, DF_FN *F, ...)
       memcpy((char *)b->Data + b->persize * b->Tail, new_data_addr, new_data_size);
       memcpy((char *)b->Data + b->persize * b->Tail + new_data_size, &b->FanOut, INTSIZE); //改进点：改为赋值
 
+      syscall(SYS_DFT_data_ready, b->DFT_Did);
       b->Tail = (b->Tail + 1) % b->MaxSize; // 还需要取模
 
       b->Data_Count++;
@@ -285,6 +286,7 @@ int DF_AD_GetData(DF_FN *F, ...)
     pthread_rwlock_unlock(&temp_ad->lock);
     // update list end
   }
+  syscall(SYS_DFT_activ_ready, F->DFT_Aid);
   pthread_rwlock_unlock(&F->finish_lock);
   va_end(ap);
   finish_num++;

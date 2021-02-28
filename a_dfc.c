@@ -186,8 +186,6 @@ int main(int argc, char **argv)
   DF_FNInit2(&DF_FN_A, 1, &DF_AD_ci1);
   DF_FNInit1(&DF_FN_F, &F, "F", 0);
   DF_FNInit2(&DF_FN_F, 4, &DF_AD_ci4, &DF_AD_ci3, &DF_AD_d2, &DF_AD_d1);
-  printf("Initialized");
-  getchar();
   DF_SourceInit(&DF_TFL_TABLE, 1, &DF_FN_F);
   DF_Init(&DF_TFL_TABLE, 5, &DF_FN_D, &DF_FN_C, &DF_FN_B, &DF_FN_A, &DF_FN_F);
   DF_OutputInit(&DF_TFL_TABLE, 1, &DF_AD_output);

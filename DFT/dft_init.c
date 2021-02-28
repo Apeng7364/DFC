@@ -39,12 +39,16 @@ int __init init_dft() {
     orig_syscall[SYS_DFT_new_data] = (unsigned long)syscall_table[SYS_DFT_new_data];
     orig_syscall[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
     orig_syscall[SYS_DFT_init_data] = (unsigned long)syscall_table[SYS_DFT_init_data];
+    orig_syscall[SYS_DFT_data_ready] = (unsigned long)syscall_table[SYS_DFT_data_ready];
+    orig_syscall[SYS_DFT_activ_ready] = (unsigned long)syscall_table[SYS_DFT_activ_ready];
 
     clear_and_save_cr0();
     syscall_table[SYS_DFT_new_activation] = (unsigned long)&DFT_new_activation;
     syscall_table[SYS_DFT_new_data] = (unsigned long)&DFT_new_data;
     syscall_table[SYS_DFT_show] = (unsigned long)&DFT_show;
     syscall_table[SYS_DFT_init_data] = (unsigned long)&DFT_init_data;
+    syscall_table[SYS_DFT_data_ready] = (unsigned long)&DFT_data_ready;
+    syscall_table[SYS_DFT_activ_ready] = (unsigned long)&DFT_activ_ready;
     setback_cr0();
     init_table();
     return 0;
@@ -56,6 +60,8 @@ void __exit exit_dft() {
     syscall_table[SYS_DFT_new_data] = (unsigned long)syscall_table[SYS_DFT_new_data];
     syscall_table[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
     syscall_table[SYS_DFT_init_data] = (unsigned long)syscall_table[SYS_DFT_init_data];
+    syscall_table[SYS_DFT_data_ready] = (unsigned long)syscall_table[SYS_DFT_data_ready];
+    syscall_table[SYS_DFT_activ_ready] = (unsigned long)syscall_table[SYS_DFT_activ_ready];
 
     setback_cr0();
     printk("remove dft module.\n");

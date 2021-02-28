@@ -27,13 +27,16 @@ int init_table(void);
 #define SYS_DFT_new_data 337
 #define SYS_DFT_init_data 338
 #define SYS_DFT_show 339
+#define SYS_DFT_data_ready 340
+#define SYS_DFT_activ_ready 341
 
 
 int DFT_new_data(const struct pt_regs *regs);
 int DFT_new_activation(const struct pt_regs *regs);
 int DFT_init_data(const struct pt_regs *regs);
 int DFT_show(void);
-
+int DFT_data_ready(const struct pt_regs *regs);
+int DFT_activ_ready(const struct pt_regs *regs);
 
 
 #endif //__DFT_H

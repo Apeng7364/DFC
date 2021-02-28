@@ -79,7 +79,17 @@ int DFT_init_data(const struct pt_regs *regs) {
     return 0;
 }
 
+int DFT_data_ready(const struct pt_regs *regs) {
+    int idx = regs->di & 0xffffffffu;
+    DFT_D[idx].valid = 0;
+    return 0;
+}
 
+int DFT_activ_ready(const struct pt_regs *regs) {
+    int idx = regs->di & 0xffffffffu;
+    DFT_A[idx].valid = 0;
+    return 0;
+}
 
 
 
