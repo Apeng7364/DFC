@@ -1,12 +1,11 @@
 #define _GNU_SOURCE
 
-#include<stdlib.h>
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
-#include<sys/syscall.h>
-#include<dfc.h>
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/syscall.h>
+#include <dfc.h>
 
 int DF_fanout_output = 0;
 int DF_persize_output;
@@ -42,8 +41,6 @@ int DF_fanout_d1 = 1;
 int DF_persize_d1;
 DF_AD DF_AD_d1;
 
-
-
 DF_FN DF_FN_D;
 DF_FN DF_FN_C;
 DF_FN DF_FN_B;
@@ -57,122 +54,111 @@ pthread_mutex_t sched_info_mutex;
 
 struct timeval program_start;
 
-
 void F(/* DF-C function */)
 {
   int DF_count;
 
-double ci4;
+  double ci4;
 
   DF_persize_ci4 = sizeof(ci4);
-double ci3;
+  double ci3;
 
   DF_persize_ci3 = sizeof(ci3);
-double d2;
+  double d2;
 
   DF_persize_d2 = sizeof(d2);
-double d1;
+  double d1;
 
   DF_persize_d1 = sizeof(d1);
   DF_SOURCE_Get_And_Update(&DF_FN_F, &DF_count);
-int DF_FN_item_index=use_funcname_to_get_item_index(&DF_TFL_TABLE,"F");
-{
-  printf("case #%d F uid: %d\n", DF_count, gettid());
-  d1 = (double) (rand() % 10) + 1;
-  d2 = (double) (rand() % 10) + 1;
-  ci3 = (double) (rand() % 10) + 1;
-  ci4 = (double) (rand() % 10) + 1;
+  int DF_FN_item_index = use_funcname_to_get_item_index(&DF_TFL_TABLE, "F");
+  {
+    printf("case #%d F uid: %d\n", DF_count, gettid());
+    d1 = (double)(rand() % 10) + 1;
+    d2 = (double)(rand() % 10) + 1;
+    ci3 = (double)(rand() % 10) + 1;
+    ci4 = (double)(rand() % 10) + 1;
+  }
+  DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_F, &ci4, DF_persize_ci4, &ci3, DF_persize_ci3, &d2, DF_persize_d2, &d1, DF_persize_d1);
 }
-  DF_AD_UpData(DF_count,&DF_TFL_TABLE, &DF_FN_F, &ci4, DF_persize_ci4, &ci3, DF_persize_ci3, &d2, DF_persize_d2, &d1, DF_persize_d1);
-
-}
-
 
 void A(/* DF-C function */)
 {
-double d1;
+  double d1;
 
   DF_persize_d1 = sizeof(d1);
-double ci1;
+  double ci1;
 
   DF_persize_ci1 = sizeof(ci1);
   int DF_count = DF_AD_GetData(&DF_FN_A, &d1, DF_persize_d1);
-{
-  printf("case #%d A uid: %d\n", DF_count, gettid());
-  ci1 = d1 * d1;
+  {
+    printf("case #%d A uid: %d\n", DF_count, gettid());
+    ci1 = d1 * d1;
+  }
+  DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_A, &ci1, DF_persize_ci1);
 }
-  DF_AD_UpData(DF_count,&DF_TFL_TABLE, &DF_FN_A, &ci1, DF_persize_ci1);
-
-}
-
 
 void B(/* DF-C function */)
 {
-double d2;
+  double d2;
 
   DF_persize_d2 = sizeof(d2);
-double ci2;
+  double ci2;
 
   DF_persize_ci2 = sizeof(ci2);
   int DF_count = DF_AD_GetData(&DF_FN_B, &d2, DF_persize_d2);
-{
-  printf("case #%d B uid: %d\n", DF_count, gettid());
-  ci2 = 1.0 / d2;
+  {
+    printf("case #%d B uid: %d\n", DF_count, gettid());
+    ci2 = 1.0 / d2;
+  }
+  DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_B, &ci2, DF_persize_ci2);
 }
-  DF_AD_UpData(DF_count,&DF_TFL_TABLE, &DF_FN_B, &ci2, DF_persize_ci2);
-
-}
-
 
 void C(/* DF-C function */)
 {
-double ci4;
+  double ci4;
 
   DF_persize_ci4 = sizeof(ci4);
-double ci3;
+  double ci3;
 
   DF_persize_ci3 = sizeof(ci3);
-double ci2;
+  double ci2;
 
   DF_persize_ci2 = sizeof(ci2);
-double ci1;
+  double ci1;
 
   DF_persize_ci1 = sizeof(ci1);
-double di;
+  double di;
 
   DF_persize_di = sizeof(di);
   int DF_count = DF_AD_GetData(&DF_FN_C, &ci4, DF_persize_ci4, &ci3, DF_persize_ci3, &ci2, DF_persize_ci2, &ci1, DF_persize_ci1);
-{
-  printf("case #%d C uid: %d\n", DF_count, gettid());
-  di = ci1 + ci2 + ci3 + ci4;
+  {
+    printf("case #%d C uid: %d\n", DF_count, gettid());
+    di = ci1 + ci2 + ci3 + ci4;
+  }
+  DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_C, &di, DF_persize_di);
 }
-  DF_AD_UpData(DF_count,&DF_TFL_TABLE, &DF_FN_C, &di, DF_persize_di);
-
-}
-
 
 void D(/* DF-C function */)
 {
-double di;
+  double di;
 
   DF_persize_di = sizeof(di);
-double output;
+  double output;
 
   DF_persize_output = sizeof(output);
   int DF_count = DF_AD_GetData(&DF_FN_D, &di, DF_persize_di);
-{
-  output = -di;
-  printf("case #%d D output: %lf\n", DF_count, output);
+  {
+    output = -di;
+    printf("case #%d D uid: %d output: %lf\n", DF_count, gettid(), output);
+  }
+  DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_D, &output, DF_persize_output);
 }
-  DF_AD_UpData(DF_count,&DF_TFL_TABLE, &DF_FN_D, &output, DF_persize_output);
-
-}
-
 
 double __original_main()
 {
   srand(time(0));
-  DF_Run(&DF_TFL_TABLE, 4);
+  DF_Run(&DF_TFL_TABLE, 1);
   return (0);
 }
 
@@ -190,7 +176,6 @@ int main(int argc, char **argv)
   DF_ADInit(&DF_AD_d2, sizeof(double), DF_fanout_d2);
   DF_ADInit(&DF_AD_ci3, sizeof(double), DF_fanout_ci3);
   DF_ADInit(&DF_AD_ci4, sizeof(double), DF_fanout_ci4);
-
   DF_FNInit1(&DF_FN_D, &D, "D", 1, &DF_AD_di);
   DF_FNInit2(&DF_FN_D, 1, &DF_AD_output);
   DF_FNInit1(&DF_FN_C, &C, "C", 4, &DF_AD_ci4, &DF_AD_ci3, &DF_AD_ci2, &DF_AD_ci1);
@@ -201,13 +186,13 @@ int main(int argc, char **argv)
   DF_FNInit2(&DF_FN_A, 1, &DF_AD_ci1);
   DF_FNInit1(&DF_FN_F, &F, "F", 0);
   DF_FNInit2(&DF_FN_F, 4, &DF_AD_ci4, &DF_AD_ci3, &DF_AD_d2, &DF_AD_d1);
-
+  printf("Initialized");
+  getchar();
   DF_SourceInit(&DF_TFL_TABLE, 1, &DF_FN_F);
   DF_Init(&DF_TFL_TABLE, 5, &DF_FN_D, &DF_FN_C, &DF_FN_B, &DF_FN_A, &DF_FN_F);
   DF_OutputInit(&DF_TFL_TABLE, 1, &DF_AD_output);
-  int DF_original_main_ret = (int) __original_main();
+  int DF_original_main_ret = (int)__original_main();
   fclose(fp_sche);
-  void** result = DF_Result(&DF_TFL_TABLE);
-  return(DF_original_main_ret);
+  void **result = DF_Result(&DF_TFL_TABLE);
+  return (DF_original_main_ret);
 }
-

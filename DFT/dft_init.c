@@ -15,8 +15,7 @@ static void __exit exit_dft(void);
 
 int orig_cr0;
 unsigned long *syscall_table = 0;
-unsigned long orig_syscall[512];
-static int (*orig_DFT_alloc)(void);
+static unsigned long orig_syscall[512];
 
 int clear_and_save_cr0()	
 {
@@ -36,11 +35,16 @@ int setback_cr0() {
 int __init init_dft() {
     printk("insert dft module.\n");
     syscall_table = (unsigned long *)kallsyms_lookup_name("sys_call_table");
-    orig_syscall[SYS_DFT_alloc] = (unsigned long)syscall_table[SYS_DFT_alloc];
     orig_syscall[SYS_DFT_new_activation] = (unsigned long)syscall_table[SYS_DFT_new_activation];
     orig_syscall[SYS_DFT_new_data] = (unsigned long)syscall_table[SYS_DFT_new_data];
+    orig_syscall[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
+    orig_syscall[SYS_DFT_init_data] = (unsigned long)syscall_table[SYS_DFT_init_data];
+
     clear_and_save_cr0();
-    syscall_table[SYS_DFT_alloc] = (unsigned long)&DFT_alloc;
+    syscall_table[SYS_DFT_new_activation] = (unsigned long)&DFT_new_activation;
+    syscall_table[SYS_DFT_new_data] = (unsigned long)&DFT_new_data;
+    syscall_table[SYS_DFT_show] = (unsigned long)&DFT_show;
+    syscall_table[SYS_DFT_init_data] = (unsigned long)&DFT_init_data;
     setback_cr0();
     init_table();
     return 0;
@@ -48,9 +52,11 @@ int __init init_dft() {
 
 void __exit exit_dft() {
     clear_and_save_cr0();
-    syscall_table[SYS_DFT_alloc] = (unsigned long)syscall_table[SYS_DFT_alloc];
     syscall_table[SYS_DFT_new_activation] = (unsigned long)syscall_table[SYS_DFT_new_activation];
     syscall_table[SYS_DFT_new_data] = (unsigned long)syscall_table[SYS_DFT_new_data];
+    syscall_table[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
+    syscall_table[SYS_DFT_init_data] = (unsigned long)syscall_table[SYS_DFT_init_data];
+
     setback_cr0();
     printk("remove dft module.\n");
 }

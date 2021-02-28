@@ -1,4 +1,4 @@
-CFLAGS = -D_REENTRANT -Wall -pedantic -Isrc -I../c_printf/sources -I../threadpool/src -std=c99 -O3
+CFLAGS = -D_REENTRANT -Wall -pedantic -I/home/apeng/include -Isrc -I../c_printf/sources -I../threadpool/src -std=c99 -O3
 LDLIBS = 
 
 ifdef DEBUG

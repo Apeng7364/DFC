@@ -66,6 +66,7 @@ struct Active_Data{
     // 指向数据流函数的数据，目前来看 Active Data 应该>是唯一的
     int*                DF_flag_Index;              //是第几位
     pthread_rwlock_t    lock;
+    int                 DFT_Did;
 };//主动数据链路
 
 struct DF_Fun_Node {
@@ -88,10 +89,12 @@ struct DF_Fun_Node {
     // 数据分配是怎样一个操作呢
     DF_TADL*            DF_Fun_AD_OutPut;           //输出主动链块
     // 塞数据到里面
+
+    int                 DFT_Aid;
 };
 
-void DF_ADInit(DF_AD* AD, int persize,int FanOut);
-void DF_FNInit1(DF_FN* FN,void*FunAddress ,char *Name, int InPutADNum,...);
+void DF_ADInit(DF_AD* AD, int persize, int FanOut);
+void DF_FNInit1(DF_FN* FN, void (*FunAddress)(void), char *Name, int InPutADNum,...);
 void DF_FNInit2(DF_FN *FN, int OutPutADNum, ...);
 void DF_AD_UpData(int DF_Count,DF_TFL *table, DF_FN *F,...);
 int DF_AD_GetData(DF_FN* F, ...);

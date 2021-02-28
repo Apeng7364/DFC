@@ -3,5 +3,5 @@
 #include "dft.h"
 
 int main() {
-    syscall(SYS_DFT_alloc);
+    syscall(SYS_DFT_show);
 }

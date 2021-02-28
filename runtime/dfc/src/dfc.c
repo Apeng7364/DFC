@@ -1,5 +1,6 @@
 #define THREADNUM 16
 #include "dfc.h"
+#include "dft.h"
 
 struct DF_Ready_Flags
 {
@@ -34,25 +35,44 @@ void DF_ADInit(DF_AD *AD, int persize, int FanOut)
   pthread_rwlock_init(&AD->lock, NULL);
   AD->DF_Fun_Index = (DF_FN **)malloc(sizeof(DF_FN *) * FanOut); // 这个就是直接指向作为源数据的函数
   AD->DF_flag_Index = (int *)malloc(sizeof(int) * FanOut);       // 第几位这个用途待定
+
+  AD->DFT_Did = syscall(SYS_DFT_new_data, AD->Data, persize, -1); // new data item
 }
 
 //FN>初始化函数一，  连接输入和FN节点的关系（FN指向AD，AD指向FN）
-void DF_FNInit1(DF_FN *FN, void *FunAddress, char *Name, int InPutADNum, ...)
+void DF_FNInit1(DF_FN *FN, void (*FunAddress)(void), char *Name, int InPutADNum, ...)
 {
   va_list ap;
   va_start(ap, InPutADNum);
   FN->DF_Fun_AD_InPut = (DF_TADL *)malloc(sizeof(DF_TADL) + InPutADNum * sizeof(DF_AD *)); //柔性数组使用的指针数组 可能有BUG
   FN->DF_Fun_AD_InPut->TargetNum = InPutADNum;
-  // int Flaglen = (InPutADNum + 256 - 1) / 256; //InPutADNum/256 向上取整;
-  for (int i = 0; i < InPutADNum; i++)
-  {
-    DF_AD *p;
-    p = va_arg(ap, DF_AD *);
-    FN->DF_Fun_AD_InPut->Target[i] = p;       //Input指向AD
-    p->DF_Fun_Index[p->FanOut] = (DF_FN *)FN; //AD指向FUN
-    p->DF_flag_Index[p->FanOut] = i;          //AD是FN>的第几位标志
-    p->FanOut++;
+  DF_AD *cur;
+  if (InPutADNum > 0) {
+    cur = va_arg(ap, DF_AD *);
+    FN->DF_Fun_AD_InPut->Target[0] = cur;       //Input指向AD
+    cur->DF_Fun_Index[cur->FanOut] = (DF_FN *)FN; //AD指向FUN
+    cur->DF_flag_Index[cur->FanOut] = 0;          //AD是FN>的第几位标志
+    cur->FanOut++;
+    FN->DFT_Aid = syscall(SYS_DFT_new_activation, InPutADNum, cur->DFT_Did, gettid()); // new activations item
+    // syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, -1); // set cur data link
+    for (int i = 1; i < InPutADNum; i++)
+    {
+      DF_AD *p;
+      p = va_arg(ap, DF_AD *);
+      syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, p->DFT_Did); // set input data link
+      cur = p;
+      FN->DF_Fun_AD_InPut->Target[i] = p;       //Input指向AD
+      p->DF_Fun_Index[p->FanOut] = (DF_FN *)FN; //AD指向FUN
+      p->DF_flag_Index[p->FanOut] = i;          //AD是FN>的第几位标志
+      p->FanOut++;
+    }
+    syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, -1); // set last data link
   }
+  
+  
+  // int Flaglen = (InPutADNum + 256 - 1) / 256; //InPutADNum/256 向上取整;
+  
+  
   FN->Func = (void (*)(void))FunAddress; //初始化FN的一些常量信息，函数名，函数指针，就绪标志
   FN->Name = (char *)Name;
   FN->FinishNum = 0;

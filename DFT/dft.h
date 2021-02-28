@@ -17,18 +17,23 @@ typedef struct {
     int valid;
     void *laddr_st;
     void *laddr_ed;
-    int task_id;
+    int aid;
     int next_data;
 } DFT_D_t;
 
 int init_table(void);
 
-#define SYS_DFT_alloc 335
 #define SYS_DFT_new_activation 336
 #define SYS_DFT_new_data 337
+#define SYS_DFT_init_data 338
+#define SYS_DFT_show 339
 
-int DFT_alloc(void);
-int DFT_new_activation(void *addr, size_t size, int next_data);
-int DFT_new_data(int in_count, int in_data, int pid);
+
+int DFT_new_data(const struct pt_regs *regs);
+int DFT_new_activation(const struct pt_regs *regs);
+int DFT_init_data(const struct pt_regs *regs);
+int DFT_show(void);
+
+
 
 #endif //__DFT_H
