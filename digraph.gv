@@ -1,11 +1,8 @@
 digraph
 {
-  D -> TERMINATE [label="output"];
-  C -> D [label="di"];
+  C -> TERMINATE [label="di"];
   B -> C [label="ci2"];
   A -> C [label="ci1"];
-  F -> C [label="ci4"];
-  F -> C [label="ci3"];
   F -> B [label="d2"];
   F -> A [label="d1"];
 }

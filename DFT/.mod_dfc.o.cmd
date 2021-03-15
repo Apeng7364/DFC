@@ -1,1 +1,0 @@
-cmd_/home/apeng/Desktop/DFC_me/DFT/mod_dfc.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /home/apeng/Desktop/DFC_me/DFT/mod_dfc.o /home/apeng/Desktop/DFC_me/DFT/dft_init.o /home/apeng/Desktop/DFC_me/DFT/dft.o
