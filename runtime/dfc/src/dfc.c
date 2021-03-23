@@ -36,7 +36,6 @@ void DF_ADInit(DF_AD *AD, int persize, int FanOut)
   AD->DF_Fun_Index = (DF_FN **)malloc(sizeof(DF_FN *) * FanOut); // 这个就是直接指向作为源数据的函数
   AD->DF_flag_Index = (int *)malloc(sizeof(int) * FanOut);       // 第几位这个用途待定
 
-  AD->DFT_Did = syscall(SYS_DFT_new_data, AD->Data, persize, -1); // new data item
 }
 
 //FN>初始化函数一，  连接输入和FN节点的关系（FN指向AD，AD指向FN）
@@ -53,20 +52,18 @@ void DF_FNInit1(DF_FN *FN, void (*FunAddress)(void), char *Name, int InPutADNum,
     cur->DF_Fun_Index[cur->FanOut] = (DF_FN *)FN; //AD指向FUN
     cur->DF_flag_Index[cur->FanOut] = 0;          //AD是FN>的第几位标志
     cur->FanOut++;
-    FN->DFT_Aid = syscall(SYS_DFT_new_activation, InPutADNum, cur->DFT_Did, gettid()); // new activations item
-    // syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, -1); // set cur data link
+    FN->DFT_Aid = syscall(SYS_DFT_new_activation, InPutADNum); // new activations item
+    if (FN->DFT_Aid == -1) exit(-1);
     for (int i = 1; i < InPutADNum; i++)
     {
       DF_AD *p;
       p = va_arg(ap, DF_AD *);
-      syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, p->DFT_Did); // set input data link
       cur = p;
       FN->DF_Fun_AD_InPut->Target[i] = p;       //Input指向AD
       p->DF_Fun_Index[p->FanOut] = (DF_FN *)FN; //AD指向FUN
       p->DF_flag_Index[p->FanOut] = i;          //AD是FN>的第几位标志
       p->FanOut++;
     }
-    syscall(SYS_DFT_init_data, cur->DFT_Did, FN->DFT_Aid, -1); // set last data link
   }
   
   
@@ -144,7 +141,6 @@ void DF_AD_UpData(int DF_Count, DF_TFL *table, DF_FN *F, ...)
       memcpy((char *)b->Data + b->persize * b->Tail, new_data_addr, new_data_size);
       memcpy((char *)b->Data + b->persize * b->Tail + new_data_size, &b->FanOut, INTSIZE); //改进点：改为赋值
 
-      syscall(SYS_DFT_data_ready, b->DFT_Did);
       b->Tail = (b->Tail + 1) % b->MaxSize; // 还需要取模
 
       b->Data_Count++;
@@ -164,7 +160,12 @@ void DF_AD_UpData(int DF_Count, DF_TFL *table, DF_FN *F, ...)
         finish_data_count = temp_f->DF_Fun_AD_InPut->TargetNum; // 当前方法需要多少个数据
         finish_flag = (1 << finish_data_count) - 1;             // 2 => 0000 0011
         flag = b->DF_flag_Index[i];                             // 当前方法的第几个数据
+        
         temp_r = temp_f->ready;
+        // printf("finish_data_cout: %d, finish_flag: %d, flag: %d\n", finish_data_count, finish_flag, flag);
+        // printf("temp_r: %p", temp_r);
+        // if (temp_r) printf(" temp_r->Flags: %d", temp_r->Flags);
+        // putchar(10);
         while (temp_r)
         {
           if ((temp_r->Flags >> flag) & 1)
@@ -180,7 +181,7 @@ void DF_AD_UpData(int DF_Count, DF_TFL *table, DF_FN *F, ...)
           }
         }
 
-        temp_r = temp_f->ready;
+        // temp_r = temp_f->ready;
         if (!done)
         { //最后一个ready为NULL
           new_r = (DF_Ready *)malloc(sizeof(DF_Ready));
@@ -286,7 +287,6 @@ int DF_AD_GetData(DF_FN *F, ...)
     pthread_rwlock_unlock(&temp_ad->lock);
     // update list end
   }
-  syscall(SYS_DFT_activ_ready, F->DFT_Aid);
   pthread_rwlock_unlock(&F->finish_lock);
   va_end(ap);
   finish_num++;
@@ -366,6 +366,7 @@ void DF_OutputInit(DF_TFL *table, int outputnum, ...)
   {
     table->output_list[i] = va_arg(ap, DF_AD *);
   }
+  syscall(SYS_DFT_new_activation, outputnum);
 }
 
 int DF_Should_Stop(DF_TFL *table)
@@ -387,8 +388,8 @@ int DF_Should_Stop(DF_TFL *table)
 
 void printf_thread_info(DF_TFL *table)
 {
-  if (system("clear"))
-    return;
+  // if (system("clear"))
+    // return;
 
   for (int i = 0; i < table->thread_num; i++)
   {

@@ -1,8 +1,0 @@
-digraph
-{
-  C -> TERMINATE [label="di"];
-  B -> C [label="ci2"];
-  A -> C [label="ci1"];
-  F -> B [label="d2"];
-  F -> A [label="d1"];
-}

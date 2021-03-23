@@ -7,7 +7,7 @@ LDFLAGS += -g
 endif
 
 TARGETS = tests/thrdtest tests/heavy tests/shutdown \
-	libthreadpool.a
+	libthreadpool.a libthreadpool.so
 
 all: $(TARGETS)
 
@@ -22,11 +22,8 @@ tests/heavy.o: tests/heavy.c src/threadpool.h
 shared: libthreadpool.so
 static: libthreadpool.a
 
-# libthreadpool.so: src/threadpool.c src/threadpool.h
-# 	$(CC) -shared -fPIC ${CFLAGS} -o $@ $< ${LDLIBS}
-
-# src/libthreadpool.o: src/threadpool.c src/threadpool.h
-# 	$(CC) -c -fPIC ${CFLAGS} -o $@ $<
+libthreadpool.so: src/threadpool.c src/threadpool.h
+	$(CC) -shared -fPIC ${CFLAGS} -o $@ $< ${LDLIBS}
 
 libthreadpool.a: src/threadpool.o
 	ar rcs $@ $^
@@ -42,7 +39,9 @@ test:
 install:
 	install -m644 src/threadpool.h ~/include/
 	install -m644 libthreadpool.a ~/lib/
+	install -m644 libthreadpool.so ~/lib/
 
 uninstall:
 	rm -f ~/include/threadpool.h
 	rm -f ~/lib/libthreadpool.a
+	rm -f ~/lib/libthreadpool.so

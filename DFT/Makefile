@@ -7,3 +7,7 @@ all:
 	make -C $(KERNELDIR) M=$(PWD) modules
 clean:
 	make -C $(KERNELDIR) M=$(PWD) clean
+install:
+	cp dft.h ~/include/
+uninstall:
+	rm ~/include/dft.h

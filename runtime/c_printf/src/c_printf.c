@@ -38,15 +38,15 @@ static const char *c_key(char k) {
 }
 
 // Counts occurences of character in string.
-static int howMany(const char *s, char c) {
-	int n = 0;
-	while(*s){
-		if(*s == c)
-			++n;
-		++s;
-	}
-	return n;
-}
+// static int howMany(const char *s, char c) {
+// 	int n = 0;
+// 	while(*s){
+// 		if(*s == c)
+// 			++n;
+// 		++s;
+// 	}
+// 	return n;
+// }
 
 // This is to append characters to string.
 // There's a better way for this?

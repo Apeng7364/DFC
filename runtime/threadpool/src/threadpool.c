@@ -32,6 +32,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
 
@@ -191,6 +192,7 @@ threadpool_t *threadpool_create(int thread_count, int queue_size, int flags)
 int threadpool_add(threadpool_t *pool, void (*function)(void *),
                    void *argument, int flags)
 {
+    // printf("add\n");
     int err = 0;
     int next;
 

@@ -308,7 +308,7 @@ void dfc_insert_include_to_head(void)
 	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<unistd.h>"));
 	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<stdlib.h>"));
 	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<sys/syscall.h>"));
-	// dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
+	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<math.h>"));
 	// dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
 	dfc_include_tree=BlockList(dfc_include_tree,verbit("#include<dfc.h>"));
 	aststmt t=ast;
