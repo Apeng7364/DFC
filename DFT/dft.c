@@ -1,11 +1,10 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/init.h>
-
 #include "dft.h"
+#include "dft_hash.h"
 
 DFT_A_t DFT_A[SIZE_A];
-DFT_H_t DFT_H[SIZE_HASHT];
 
 int get_invalid_A(void);
 
@@ -20,23 +19,8 @@ int init_table() {
     return 0;
 }
 
-int init_hash_table() {
-    int i = 0;
-    for (size_t i = 0; i < SIZE_HASHT; i++)
-    {
-        DFT_H[i].aid = 0;
-        DFT_H[i].pid = 0;
-    }
-}
-
-int hash(unsigned long a) {
-    return a % SIZE_HASHT;
-}
-
-
-
 int get_invalid_A() {
-    int i = 0; 
+    int i = 0;
     while(DFT_A[i].in_count && i < SIZE_A) i++;
     if (i == SIZE_A) return -1;
     else return i;
@@ -44,9 +28,10 @@ int get_invalid_A() {
 
 int DFT_new_activation(const struct pt_regs *regs) {
     int i, in_count;
-    i = get_invalid_A();
+    i = get_invalid_A(); // 分配一个DFT行
     if (i == -1) return -1;
-
+    // void *FN = regs->si;
+    // hasht_put(FN, in_count);
     in_count = regs->di & 0xfffffffu;
     DFT_A[i].in_count = in_count;
     return i;
@@ -64,6 +49,19 @@ int DFT_show() {
     for (i = 0; i < SIZE_A; i++) {
         printk("%8d %8d\n", DFT_A[i].id, DFT_A[i].in_count);
     }
+    printk("show hash\n");
+    show_hash();
     return 0;
 }
 
+
+// int DFT_hput(const struct pt_regs *regs) {
+//     return hasht_put((void *)regs->di, (int)(regs->si & 0xffffffffu));
+// }
+// int DFT_hget(const struct pt_regs *regs) {
+//     return hasht_get((void *)regs->di);
+// }
+
+// int DFT_delete(const struct pt_regs *regs) {
+//     return hasht_delete((void *)regs->di);
+// }

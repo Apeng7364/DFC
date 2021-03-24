@@ -87,7 +87,10 @@ void F(/* DF-C function */)
         printf("d1: %.02f\n", d1);
         printf("d2: %.02f\n", d2);
     }
+    // printf_thread_info(&DF_TFL_TABLE);
+
     DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_F, &d2, DF_persize_d2, &d1, DF_persize_d1);
+    // printf_thread_info(&DF_TFL_TABLE);
 }
 
 void A(/* DF-C function */)
@@ -96,6 +99,7 @@ void A(/* DF-C function */)
 
     DF_persize_d1 = sizeof(d1);
     double ci1;
+    printf_thread_info(&DF_TFL_TABLE);
 
     DF_persize_ci1 = sizeof(ci1);
     int DF_count = DF_AD_GetData(&DF_FN_A, &d1, DF_persize_d1);
@@ -104,10 +108,15 @@ void A(/* DF-C function */)
         ci1 = d1;
         for (int i = 0; i < 100; i++)
         {
-            ci1 = cos(d1);
+            ci1 = cos(ci1);
         }
+        ci1 = d1 * d1;
     }
+    // printf_thread_info(&DF_TFL_TABLE);
+
     DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_A, &ci1, DF_persize_ci1);
+    // printf_thread_info(&DF_TFL_TABLE);
+
 }
 
 void B(/* DF-C function */)
@@ -118,16 +127,21 @@ void B(/* DF-C function */)
     double ci2;
 
     DF_persize_ci2 = sizeof(ci2);
+    printf_thread_info(&DF_TFL_TABLE);
+
     int DF_count = DF_AD_GetData(&DF_FN_B, &d2, DF_persize_d2);
     {
         printf("case #%d B uid: %d\n", DF_count, gettid());
         ci2 = d2;
         for (int i = 0; i < 100; i++)
         {
-            ci2 = cos(d2);
+            ci2 = cos(ci2);
         }
+        ci2 = d2 * d2;
     }
+
     DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_B, &ci2, DF_persize_ci2);
+
 }
 
 void C(/* DF-C function */)
@@ -148,6 +162,8 @@ void C(/* DF-C function */)
         printf("di: %f\n", di);
     }
     DF_AD_UpData(DF_count, &DF_TFL_TABLE, &DF_FN_C, &di, DF_persize_di);
+    // printf_thread_info(&DF_TFL_TABLE);
+
 }
 
 double __original_main()
@@ -181,12 +197,16 @@ int main(int argc, char **argv)
     DF_SourceInit(&DF_TFL_TABLE, 1, &DF_FN_F);
     DF_Init(&DF_TFL_TABLE, 4, &DF_FN_C, &DF_FN_B, &DF_FN_A, &DF_FN_F);
     DF_OutputInit(&DF_TFL_TABLE, 1, &DF_AD_di);
-    exit(0);
+
+    // exit(0);
 
     
     int DF_original_main_ret = (int)__original_main();
-    fclose(fp_sche);
+
+    // fclose(fp_sche);
     void **result = DF_Result(&DF_TFL_TABLE);
+
+
     gettimeofday(&program_end, NULL);
     printf("time spend: %f\n", difftimeval(&program_end, &program_start));
     return (DF_original_main_ret);

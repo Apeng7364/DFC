@@ -1,7 +1,7 @@
 #define THREADNUM 16
 #include "dfc.h"
 #include "dft.h"
-
+// #define DEBUG
 struct DF_Ready_Flags
 {
   int Flags;
@@ -52,6 +52,8 @@ void DF_FNInit1(DF_FN *FN, void (*FunAddress)(void), char *Name, int InPutADNum,
     cur->DF_Fun_Index[cur->FanOut] = (DF_FN *)FN; //AD指向FUN
     cur->DF_flag_Index[cur->FanOut] = 0;          //AD是FN>的第几位标志
     cur->FanOut++;
+    // printf_thread_info
+    // printf
     FN->DFT_Aid = syscall(SYS_DFT_new_activation, InPutADNum); // new activations item
     if (FN->DFT_Aid == -1) exit(-1);
     for (int i = 1; i < InPutADNum; i++)

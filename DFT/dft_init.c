@@ -37,22 +37,32 @@ int init_dft() {
     syscall_table = (unsigned long *)kallsyms_lookup_name("sys_call_table");
     orig_syscall[SYS_DFT_new_activation] = (unsigned long)syscall_table[SYS_DFT_new_activation];
     orig_syscall[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
+    // orig_syscall[SYS_DFT_hput] = (unsigned long)syscall_table[SYS_DFT_hput];
+    // orig_syscall[SYS_DFT_hget] = (unsigned long)syscall_table[SYS_DFT_hget];
+    // orig_syscall[SYS_DFT_delete] = (unsigned long)syscall_table[SYS_DFT_delete];
 
     clear_and_save_cr0();
     syscall_table[SYS_DFT_new_activation] = (unsigned long)&DFT_new_activation;
     syscall_table[SYS_DFT_show] = (unsigned long)&DFT_show;
+    // syscall_table[SYS_DFT_hput] = (unsigned long)&DFT_hput;
+    // syscall_table[SYS_DFT_hget] = (unsigned long)&DFT_hget;
+    // syscall_table[SYS_DFT_delete] = (unsigned long)&DFT_delete;
     setback_cr0();
     init_table();
     return 0;
 }
 
 void exit_dft() {
+    printk("remove dft module.\n");
     clear_and_save_cr0();
     syscall_table[SYS_DFT_new_activation] = (unsigned long)syscall_table[SYS_DFT_new_activation];
     syscall_table[SYS_DFT_show] = (unsigned long)syscall_table[SYS_DFT_show];
-
+    // syscall_table[SYS_DFT_hput] = (unsigned long)syscall_table[SYS_DFT_hput];
+    // syscall_table[SYS_DFT_hget] = (unsigned long)syscall_table[SYS_DFT_hget];
+    // syscall_table[SYS_DFT_delete] = (unsigned long)syscall_table[SYS_DFT_delete];
     setback_cr0();
-    printk("remove dft module.\n");
+    destroy_hash_table();
+    DFT_show();
 }
 
 module_init(init_dft);

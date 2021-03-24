@@ -1,5 +1,5 @@
 obj-m += mod_dfc.o
-mod_dfc-objs := dft_init.o dft.o 
+mod_dfc-objs := dft_init.o dft.o dft_hash.o
 PWD:= $(shell pwd)
 KERNELDIR:= /lib/modules/$(shell uname -r)/build
 EXTRA_CFLAGS= -O0
